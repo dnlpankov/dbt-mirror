@@ -34,3 +34,6 @@ models:
     users:
       +enabled: true
       +materialized: table
+    brand_performance:
+      +enabled: true
+      +materialized: table
