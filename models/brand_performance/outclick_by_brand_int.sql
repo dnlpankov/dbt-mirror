@@ -44,14 +44,17 @@ select
         WHEN campaign_name::text = 'PA' THEN brand_name || ' PA'
         ELSE brand_name
     END as brand_name, 
-    NULL as outclicks, NULL as unique_outclicks, NULL as avg_list_position, NULL as pos_list,
+    NULL as outclicks, 
+    NULL as unique_outclicks, 
+    NULL as avg_list_position, 
+    NULL as pos_list,
     sum(registrations) as signups, sum(cpa_count) as cpa_count, sum(cpa_commissions) AS cpa_commissions,
     coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
     sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
     avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
 from {{ source('main','records') }} records
 where right(brand_name,6)<>'sports'
-    and date > '2023-12-31'
+    and date_parsed > '2023-12-31'
 --[[ and date_parsed in ( select date_parsed from calendar where {{calendar_date}} ) ]]
 -- [[ and geo in (select distinct geo from campaign_names_mapping WHERE {{country_code_var}}) ]]
 -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{campaign_name_var}}) ]]
