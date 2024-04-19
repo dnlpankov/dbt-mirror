@@ -20,7 +20,7 @@ where
     matomo_actions.type = 'event' 
     AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
     and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
-    and date(timestamp - interval '2 hours') >'2024-02-16'
+    and date(timestamp - interval '2 hours') >'2023-12-31'
 --[[ and parse_matomo_timestamp(timestamp) in ( select date_parsed from calendar where {{calendar_date}} ) ]]
 -- [[ and "left"(matomo_actions.eventname::text, 2) in ( select distinct geo from campaign_names_mapping WHERE {{country_code_var}} ) ]]
 -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{campaign_name_var}})]]
@@ -51,6 +51,7 @@ select
     avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
 from {{ source('main','records') }} records
 where right(brand_name,6)<>'sports'
+    and date > '2023-12-31'
 --[[ and date_parsed in ( select date_parsed from calendar where {{calendar_date}} ) ]]
 -- [[ and geo in (select distinct geo from campaign_names_mapping WHERE {{country_code_var}}) ]]
 -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{campaign_name_var}}) ]]
