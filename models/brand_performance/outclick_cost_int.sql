@@ -15,7 +15,7 @@ select
     where matomo_actions.type = 'event' 
         AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
         and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
-        AND date(timestamp - interval '2 hours')>'2024-02-16' --matomo
+        AND date(timestamp - interval '2 hours')>'2023-12-31' --matomo
     group by campaign_name, campaignname, date, brand_name, country_code
     union all
     select 
@@ -29,5 +29,5 @@ select
     left join {{ source('main','campaign_names_mapping') }} campaign_names_mapping on campaign_names_mapping.gap_campaign_name=records_gap_campaigns.campaign
     where 
         campaign_names_mapping.campaign_vertical='casino'
-        and day >'2024-02-16' --matomo
+        and day >'2023-12-31' --matomo
     group by day, country_code, campaign_name, ga_campaign_name
