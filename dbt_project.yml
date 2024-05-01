@@ -35,10 +35,10 @@ models:
 #      +enabled: true
 #      +materialized: table
 
-    staging:
-    +enabled: true
-    +materialized: table
+    # staging:
+    # +enabled: true
+    # +materialized: table
 
-    # brand_performance:
-    #   +enabled: true
-    #   +materialized: table
+    brand_performance:
+      +enabled: true
+      +materialized: table

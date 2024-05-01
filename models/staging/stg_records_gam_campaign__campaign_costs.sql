@@ -11,9 +11,8 @@ select
      else 'other'
     END as betting_type,
     console_campaign_name as campaign_name, 
-    lower(campaign) as ga_campaign_name, 
-    NULL as brand_name, 
-    NULL as unique_outclicks, 
+    lower(campaign) as ga_campaign_name,
+    campaign_names_mapping.traffic_source,
     sum(cost) as cost
 from {{ source('main','records_gap_campaigns') }}  records_gap_campaigns
 -- left join {{ source('main','campaign_names_mapping') }} campaign_names_mapping 
@@ -23,7 +22,7 @@ on campaign_names_mapping.gap_campaign_name=records_gap_campaigns.campaign
 where 
     day >'2023-12-31' --matomo
     and campaign_names_mapping.campaign_vertical is not NULL -- exclude all the missing for the campaign vertical data
-group by day, country_code, campaign_name, ga_campaign_name, betting_type, campaign_names_mapping.campaign_vertical
+group by day, country_code, campaign_name, ga_campaign_name, betting_type, campaign_names_mapping.traffic_source, campaign_names_mapping.campaign_vertical
 
 -- select betting_type, 
 -- count(*) 
