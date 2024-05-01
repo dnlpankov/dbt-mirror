@@ -70,3 +70,60 @@ Runtime Error
 [0m01:13:05.792792 [debug] [MainThread]: Command `dbt run` failed at 01:13:05.791806 after 0.26 seconds
 [0m01:13:05.795750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418E031A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418DB1D100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418DB1D190>]}
 [0m01:13:05.798743 [debug] [MainThread]: Flushing usage events
+[0m20:37:40.807979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10700b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f8b150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070829d0>]}
+
+
+============================== 20:37:40.809549 | 74a2d401-2971-489f-a9b4-4b18099f6724 ==============================
+[0m20:37:40.809549 [info ] [MainThread]: Running with dbt=1.7.0
+[0m20:37:40.809876 [debug] [MainThread]: running dbt with arguments {'log_path': '/Users/danila/github/dbt/logs', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'write_json': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'log_format': 'default', 'introspect': 'True', 'quiet': 'False', 'printer_width': '80', 'profiles_dir': '/Users/danila/.dbt', 'target_path': 'None', 'cache_selected_only': 'False', 'use_colors': 'True', 'debug': 'False', 'invocation_command': 'dbt build --select staging', 'log_cache_events': 'False', 'warn_error': 'None'}
+[0m20:37:40.875373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '74a2d401-2971-489f-a9b4-4b18099f6724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10749b150>]}
+[0m20:37:40.905313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '74a2d401-2971-489f-a9b4-4b18099f6724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10756b150>]}
+[0m20:37:40.906503 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m20:37:40.913060 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m20:37:40.913505 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:37:40.913730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '74a2d401-2971-489f-a9b4-4b18099f6724', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073bb750>]}
+[0m20:37:41.341418 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.campaign_perfomance.outclick_cost_int_new' (models/brand_performance/outclick_cost_int_new.sql) depends on a node named 'stg_campaing_names_mapping__traffic_sources' which was not found
+[0m20:37:41.469997 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 0.6839943, "process_user_time": 1.226842, "process_kernel_time": 0.099768, "process_mem_max_rss": "120864768", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:37:41.470666 [debug] [MainThread]: Command `dbt build` failed at 20:37:41.470533 after 0.68 seconds
+[0m20:37:41.471047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107082fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107083010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107854ad0>]}
+[0m20:37:41.471410 [debug] [MainThread]: Flushing usage events
+[0m20:43:08.177390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092bfd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109336310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093369d0>]}
+
+
+============================== 20:43:08.178802 | 91799ebb-b5dc-43ca-b0ba-e22b19d3b6db ==============================
+[0m20:43:08.178802 [info ] [MainThread]: Running with dbt=1.7.0
+[0m20:43:08.179144 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/danila/.dbt', 'static_parser': 'True', 'write_json': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'quiet': 'False', 'introspect': 'True', 'printer_width': '80', 'log_path': '/Users/danila/github/dbt/logs', 'partial_parse': 'True', 'fail_fast': 'False', 'log_format': 'default', 'use_colors': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --exclude brand_performance', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'indirect_selection': 'eager'}
+[0m20:43:08.244244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '91799ebb-b5dc-43ca-b0ba-e22b19d3b6db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109881e50>]}
+[0m20:43:08.274072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '91799ebb-b5dc-43ca-b0ba-e22b19d3b6db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10988ea10>]}
+[0m20:43:08.274790 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m20:43:08.281528 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m20:43:08.281975 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:43:08.282212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '91799ebb-b5dc-43ca-b0ba-e22b19d3b6db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109955f90>]}
+[0m20:43:08.724774 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.campaign_perfomance.outclick_cost_int_new' (models/brand_performance/outclick_cost_int_new.sql) depends on a node named 'stg_campaing_names_mapping__traffic_sources' which was not found
+[0m20:43:08.726844 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.5712106, "process_user_time": 1.220016, "process_kernel_time": 0.09036, "process_mem_max_rss": "121208832", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:43:08.727095 [debug] [MainThread]: Command `dbt run` failed at 20:43:08.727037 after 0.57 seconds
+[0m20:43:08.727267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109310710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb8d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b7c850>]}
+[0m20:43:08.727431 [debug] [MainThread]: Flushing usage events
+[0m20:43:33.301284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10708b750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070dd210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10708b4d0>]}
+
+
+============================== 20:43:33.302511 | d4151df4-94fc-46da-8755-145677dc48d1 ==============================
+[0m20:43:33.302511 [info ] [MainThread]: Running with dbt=1.7.0
+[0m20:43:33.302841 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'introspect': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'warn_error': 'None', 'no_print': 'None', 'log_path': '/Users/danila/github/dbt/logs', 'static_parser': 'True', 'target_path': 'None', 'profiles_dir': '/Users/danila/.dbt', 'quiet': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --exclude outclick_cost_int_new', 'use_colors': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'fail_fast': 'False', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])'}
+[0m20:43:33.366621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd4151df4-94fc-46da-8755-145677dc48d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10713cc90>]}
+[0m20:43:33.397424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd4151df4-94fc-46da-8755-145677dc48d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107129410>]}
+[0m20:43:33.397772 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m20:43:33.404077 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m20:43:33.404471 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:43:33.404701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd4151df4-94fc-46da-8755-145677dc48d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077227d0>]}
+[0m20:43:33.847167 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.campaign_perfomance.outclick_cost_int_new' (models/brand_performance/outclick_cost_int_new.sql) depends on a node named 'stg_campaing_names_mapping__traffic_sources' which was not found
+[0m20:43:33.848060 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.56731486, "process_user_time": 1.238614, "process_kernel_time": 0.082752, "process_mem_max_rss": "120389632", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:43:33.848303 [debug] [MainThread]: Command `dbt run` failed at 20:43:33.848245 after 0.57 seconds
+[0m20:43:33.848477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107102750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107103690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102a0df10>]}
+[0m20:43:33.848639 [debug] [MainThread]: Flushing usage events
