@@ -18,7 +18,7 @@ select
     --NULL as signups, NULL as cpa_count, NULL as cpa_commissions, NULL as revshare_commissions, NULL as gtee_count,
     -- NULL as gtee_commissions, NULL as avg_deposit_amount
 from {{ source('main','matomo_actions') }} matomo_actions
-left join {{ source('main','matomo_visits') }} matomo_visits 
+left join {{ source('main','matomo_visits') }} matomo_visits
 on matomo_actions.matomo_visit_id=matomo_visits.id
 where 
     matomo_actions.type = 'event' 
