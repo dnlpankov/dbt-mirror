@@ -1,34 +1,58 @@
 -- models/campaign_level_data.sql
 {{ config(materialized='table') }}
 
-SELECT 
-    COALESCE(matomo.date_cet, records.date_cet) as date_cet, 
-    COALESCE(matomo.country_code, records.country_code) as country_code, 
-    COALESCE(matomo.betting_type, records.betting_type) as betting_type,
-    COALESCE(matomo.campaign_name, records.campaign_name) as campaign_name, 
-    COALESCE(matomo.ga_campaign_name, records.ga_campaign_name) as ga_campaign_name, 
-    COALESCE(matomo.brand_name, records.brand_name) as brand_name,
-    matomo.outclicks,
-    matomo.unique_outclicks,
-    matomo.avg_list_position,
-    matomo.pos_list,
-    records.signups, 
-    records.cpa_count, 
-    records.cpa_commissions, 
-    records.revshare_commissions, 
-    records.gtee_count,
-    records.gtee_commissions, 
-    records.avg_deposit_amount
-FROM {{ ref('stg_matomo_actions_visits__our_page_events') }} matomo
-FULL OUTER JOIN {{ ref('stg_record__casino_events') }} records ON 
-    matomo.date_cet = records.date_cet 
-    AND matomo.country_code = records.country_code 
-    AND matomo.betting_type=records.betting_type
-    and matomo.campaign_name = records.campaign_name 
-    AND matomo.ga_campaign_name = records.ga_campaign_name 
-    AND matomo.brand_name = records.brand_name
--- where COALESCE(matomo.country_code, records.country_code)='de'
--- and COALESCE(matomo.date_cet, records.date_cet)='2024-04-23'
--- and COALESCE(matomo.betting_type, records.betting_type)='simple'
--- and COALESCE(matomo.brand_name, records.brand_name)='ninecas'
--- order by campaign_name, ga_campaign_name 
+(
+    select 
+        actions.date_cet, 
+        country_code, 
+        campaign_name, 
+        ga_campaign_name,
+        traffic_source, 
+        brand_name,
+        betting_type,
+        outclicks,
+        unique_outclicks,
+        avg_list_position,
+        pos_list,
+        NULL as signups, 
+        NULL as cpa_count, 
+        NULL AS cpa_commissions,
+        NULL AS revshare_commissions,
+        NULL as gtee_count, 
+        NULL as gtee_commissions,
+        NULL AS avg_deposit_amount
+    from {{ref('stg_matomo_actions_visits__our_page_events')}} actions
+    left join {{ref('stg_campaign_names_mapping__traffic_sources')}} sources
+    on actions.ga_campaign_name=sources.affiliate_campaign_name
+)
+union all
+(
+select 
+    date_cet, 
+    country_code, 
+    campaign_name, 
+    ga_campaign_name, 
+    traffic_source,
+    brand_name,
+    betting_type, 
+    NULL as outclicks, 
+    NULL as unique_outclicks, 
+    NULL as avg_list_position, 
+    NULL as pos_list,
+    signups, 
+    cpa_count, 
+    cpa_commissions,
+    revshare_commissions,
+    gtee_count, 
+    gtee_commissions,
+    avg_deposit_amount
+from {{ ref('stg_record__casino_events') }} records
+-- where right(brand_name,6)<>'sports'
+--     and date_parsed > '2023-12-31'
+--[[ and date_parsed in ( select date_parsed from calendar where {{calendar_date}} ) ]]
+-- [[ and geo in (select distinct geo from campaign_names_mapping WHERE {{country_code_var}}) ]]
+-- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{campaign_name_var}}) ]]
+-- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{traffic_source}}) ]]
+-- [[ and {{brand_name_var}} ]]
+--group by date_parsed, country_code, campaign_name, ga_campaign_name, brand_name
+)

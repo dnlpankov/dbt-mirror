@@ -31,10 +31,10 @@ union all
         date_cet,
         country_code, 
         campaign_name, 
-        ga_campaign_name, 
-        betting_type,
+        ga_campaign_name,
         NULL as brand_name, 
-        NULL as unique_outclicks,
+        NULL as unique_outclicks, 
+        betting_type,
         traffic_source,
         cost
     from {{ref('stg_records_gam_campaign__campaign_costs')}}
