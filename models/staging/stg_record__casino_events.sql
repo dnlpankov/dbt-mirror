@@ -7,7 +7,7 @@ select
     CASE
     When right(brand_name,6)='sports' Then 'sports'
     else 'simple'
-    END as betting_type,
+    END as campaign_vertical,
     CASE  
         WHEN campaign_name::text = 'jpluckyslotsonline'::text THEN 'luckyslotsonline'::character varying
         WHEN campaign_name::text = 'ficashstormslots'::text THEN 'cashstormslots'::character varying

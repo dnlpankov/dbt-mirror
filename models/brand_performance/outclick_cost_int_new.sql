@@ -9,7 +9,7 @@
         ga_campaign_name, 
         brand_name,
         unique_outclicks,
-        betting_type,
+        campaign_vertical,
         sources.traffic_source,
         NULL as cost
     from {{ref('stg_matomo_actions_visits__our_page_events')}} actions
@@ -34,7 +34,7 @@ union all
         ga_campaign_name,
         NULL as brand_name, 
         NULL as unique_outclicks, 
-        betting_type,
+        campaign_vertical,
         traffic_source,
         cost
     from {{ref('stg_records_gam_campaign__campaign_costs')}}

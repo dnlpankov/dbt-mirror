@@ -1,5 +1,7 @@
 -- models/campaign_level_data.sql
 {{ config(materialized='table') }}
+with main as (
+
 
 (
     select 
@@ -9,7 +11,7 @@
         ga_campaign_name,
         traffic_source, 
         brand_name,
-        betting_type,
+        campaign_vertical,
         outclicks,
         unique_outclicks,
         avg_list_position,
@@ -34,7 +36,7 @@ select
     ga_campaign_name, 
     traffic_source,
     brand_name,
-    betting_type, 
+    campaign_vertical, 
     NULL as outclicks, 
     NULL as unique_outclicks, 
     NULL as avg_list_position, 
@@ -56,3 +58,13 @@ from {{ ref('stg_record__casino_events') }} records
 -- [[ and {{brand_name_var}} ]]
 --group by date_parsed, country_code, campaign_name, ga_campaign_name, brand_name
 )
+)
+select * 
+from main 
+--where  country_code='at' and date_cet='2024-04-24'
+
+-- select country_code, sum(outclicks)
+-- from danila.outclick_by_brand_int_new
+-- where country_code='at'
+-- and date_cet='2024-04-24'
+-- group by country_code
