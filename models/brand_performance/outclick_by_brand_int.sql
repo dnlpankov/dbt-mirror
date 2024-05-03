@@ -5,7 +5,12 @@ select
     date(timestamp - interval '2 hours') as date, 
     "left"(matomo_actions.eventname::text, 2) as country_code, 
     lower(sitename) as campaign_name, 
-    campaignname as ga_campaign_name, 
+    campaignname as ga_campaign_name,
+    CASE 
+        when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+        when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+        else 'other'
+    END as campaign_vertical, 
     "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
     count(matomo_actions.id) as outclicks,
     count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
@@ -19,14 +24,14 @@ on matomo_actions.matomo_visit_id=matomo_visits.id
 where 
     matomo_actions.type = 'event' 
     AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
-    and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+    --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
     and date(timestamp - interval '2 hours') >'2023-12-31'
 --[[ and parse_matomo_timestamp(timestamp) in ( select date_parsed from calendar where {{calendar_date}} ) ]]
 -- [[ and "left"(matomo_actions.eventname::text, 2) in ( select distinct geo from campaign_names_mapping WHERE {{country_code_var}} ) ]]
 -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{campaign_name_var}})]]
 -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{traffic_source}})]]
 -- [[ and "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) in ( select distinct brand_name from records WHERE {{brand_name_var}} ) ]]
-group by campaign_name, campaignname, date, brand_name, country_code
+group by campaign_name, campaignname, campaign_vertical, date, brand_name, country_code
 /*affiliate records aggregated data from records table*/
 union all
 select 
@@ -39,6 +44,11 @@ select
         ELSE campaign_name
     END as campaign_name, 
     lower(adgroup_name) as ga_campaign_name, 
+    CASE 
+        when right(brand_name,6)<>'sports' then 'casino'
+        when right(brand_name,6)='sports' then 'sports'
+        else 'other'
+    END as campaign_vertical,
     CASE
         WHEN campaign_name::text = 'email' THEN brand_name || ' email'
         WHEN campaign_name::text = 'PA' THEN brand_name || ' PA'
@@ -53,11 +63,12 @@ select
     sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
     avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
 from {{ source('main','records') }} records
-where right(brand_name,6)<>'sports'
-    and date_parsed > '2023-12-31'
+where date_parsed > '2023-12-31'
+    -- right(brand_name,6)<>'sports'
+    -- and date_parsed > '2023-12-31'
 --[[ and date_parsed in ( select date_parsed from calendar where {{calendar_date}} ) ]]
 -- [[ and geo in (select distinct geo from campaign_names_mapping WHERE {{country_code_var}}) ]]
 -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{campaign_name_var}}) ]]
 -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE {{traffic_source}}) ]]
 -- [[ and {{brand_name_var}} ]]
-group by date_parsed, country_code, campaign_name, ga_campaign_name, brand_name
+group by date_parsed, country_code, campaign_name, ga_campaign_name, campaign_vertical, brand_name
