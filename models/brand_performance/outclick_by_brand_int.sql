@@ -2,7 +2,8 @@
 {{ config(materialized='table') }}
 with main as (
     select 
-        date(timestamp - interval '2 hours') as date, 
+        --date(timestamp - interval '2 hours') as date, 
+       {{ matomo_timestamp_to_date('timestamp') }} AS date,
         "left"(matomo_actions.eventname::text, 2) as country_code, 
         lower(sitename) as campaign_name, 
         campaignname as ga_campaign_name,
