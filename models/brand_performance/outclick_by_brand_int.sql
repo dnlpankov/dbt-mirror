@@ -78,3 +78,6 @@ with main as (
 select *,
 {{ dbt_utils.generate_surrogate_key(['campaign_name', 'ga_campaign_name', 'campaign_vertical', 'date', 'country_code', 'brand_name']) }} as id
 from main
+
+-- select * from console.outclick_by_brand_int
+-- limit 10
