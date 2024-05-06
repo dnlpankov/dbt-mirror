@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: main  # Updated to match the model reference
+  - name: users  # Updated to match the model reference
     database: 'deep-analysis-console'
     schema: console
     tables:
