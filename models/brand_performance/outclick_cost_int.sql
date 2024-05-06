@@ -46,7 +46,22 @@ with main as
         group by day, country_code, campaign_name, ga_campaign_name, campaign_vertical
 )
 
-select 
-    {{ dbt_utils.generate_surrogate_key(['campaign_name', 'ga_campaign_name', 'campaign_vertical', 'date', 'country_code']) }} as id, 
-    *
-from main 
+
+select *,
+{{ dbt_utils.generate_surrogate_key(['campaign_name', 'ga_campaign_name', 'campaign_vertical', 'date', 'country_code', 'brand_name']) }} as id
+
+from main
+
+
+-- Checking for duplicates
+-- test as (
+--     select 
+--     {{ dbt_utils.generate_surrogate_key(['campaign_name', 'ga_campaign_name', 'campaign_vertical', 'date', 'country_code', 'brand_name']) }} as id, 
+--     *
+-- from main
+-- )
+
+-- select * 
+-- from test
+-- left join (select id, count(*) from test group by id having count(*)>1) as duplicates on test.id=duplicates.id
+-- where duplicates.id is not null --and cost is not null and test.id='df85a909516d6442b4f696089262f04a'
