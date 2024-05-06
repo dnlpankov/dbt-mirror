@@ -26,7 +26,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 vars:
   data_diff:
     prod_database: 'deep-analysis-console'
-    prod_schema: 'console'
+    prod_schema: console
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models

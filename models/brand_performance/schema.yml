@@ -6,8 +6,6 @@ models:
     columns:
       - name: id
         description: The primary key of the table
-        meta:
-          primary-key: true
         tests:
           - unique
           - not_null
