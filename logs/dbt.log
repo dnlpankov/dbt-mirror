@@ -30422,3 +30422,195 @@ drop table if exists "deep-analysis-console"."danila"."outclick_cost_int__dbt_ba
 [0m01:02:44.890718 [debug] [MainThread]: Command `dbt run` succeeded at 01:02:44.890596 after 31.65 seconds
 [0m01:02:44.891163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057dc290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057da510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057da5d0>]}
 [0m01:02:44.891549 [debug] [MainThread]: Flushing usage events
+[0m14:07:05.419217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111b9a7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11140bb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ba3d10>]}
+
+
+============================== 14:07:05.420799 | d76a0074-10fb-4fef-8551-0e7590938624 ==============================
+[0m14:07:05.420799 [info ] [MainThread]: Running with dbt=1.5.4
+[0m14:07:05.421108 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'version_check': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'no_print': 'None', 'debug': 'False', 'log_path': '/Users/danila/github/dbt/logs', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'profiles_dir': '/Users/danila/.dbt', 'fail_fast': 'False'}
+[0m14:07:05.431926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd76a0074-10fb-4fef-8551-0e7590938624', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bbba10>]}
+[0m14:07:05.432639 [debug] [MainThread]: Set downloads directory='/var/folders/9d/1bclhjt976d6zrfg9c7vq1fm0000gn/T/dbt-downloads-xsf6rq2x'
+[0m14:07:05.432856 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m14:07:05.549940 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m14:07:05.551203 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m14:07:05.580887 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m14:07:05.584419 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m14:07:05.693065 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m14:07:05.701491 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m14:07:06.202254 [info ] [MainThread]: Installed from version 1.1.1
+[0m14:07:06.202507 [info ] [MainThread]: Up to date!
+[0m14:07:06.202698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd76a0074-10fb-4fef-8551-0e7590938624', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bc6190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bfc450>]}
+[0m14:07:06.202869 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m14:07:06.576610 [info ] [MainThread]: Installed from version 0.12.1
+[0m14:07:06.577164 [info ] [MainThread]: Up to date!
+[0m14:07:06.577513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd76a0074-10fb-4fef-8551-0e7590938624', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111b8bbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bc6190>]}
+[0m14:07:06.578554 [debug] [MainThread]: Command `dbt deps` succeeded at 14:07:06.578437 after 1.17 seconds
+[0m14:07:06.578812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105484e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10547f090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10547f150>]}
+[0m14:07:06.579026 [debug] [MainThread]: Flushing usage events
+[0m14:08:56.715688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f1fb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f326d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f32d90>]}
+
+
+============================== 14:08:56.717171 | 0d3d7ac1-6efb-458e-a3c0-34d77671306b ==============================
+[0m14:08:56.717171 [info ] [MainThread]: Running with dbt=1.5.4
+[0m14:08:56.717392 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'write_json': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'debug': 'False', 'warn_error': 'None', 'no_print': 'None', 'quiet': 'True', 'profiles_dir': '/Users/danila/.dbt', 'use_experimental_parser': 'False', 'static_parser': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'printer_width': '80', 'log_path': '/Users/danila/github/dbt/logs', 'introspect': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'log_format': 'default', 'fail_fast': 'False'}
+[0m14:08:56.748834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d3d7ac1-6efb-458e-a3c0-34d77671306b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104df4450>]}
+[0m14:08:56.755147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d3d7ac1-6efb-458e-a3c0-34d77671306b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053a8610>]}
+[0m14:08:56.755570 [info ] [MainThread]: Registered adapter: postgres=1.5.4
+[0m14:08:56.767719 [debug] [MainThread]: checksum: 5d6b65bf0937b31c1cb174f5650843d5ea9953bdf3de7df3d9ed5979670d6d21, vars: {}, profile: , target: , version: 1.5.4
+[0m14:08:56.785488 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m14:08:56.785745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0d3d7ac1-6efb-458e-a3c0-34d77671306b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053bd4d0>]}
+[0m14:08:57.133573 [debug] [MainThread]: 1699: static parser successfully parsed staging/scraper/stg_scraper__records.sql
+[0m14:08:57.138422 [debug] [MainThread]: 1699: static parser successfully parsed brand_performance/test.sql
+[0m14:08:57.139456 [debug] [MainThread]: 1699: static parser successfully parsed brand_performance/clicks_to_clients_fct.sql
+[0m14:08:57.140494 [debug] [MainThread]: 1603: static parser failed on brand_performance/outclick_cost_int.sql
+[0m14:08:57.148448 [debug] [MainThread]: 1602: parser fallback to jinja rendering on brand_performance/outclick_cost_int.sql
+[0m14:08:57.148983 [debug] [MainThread]: 1699: static parser successfully parsed brand_performance/deals_dimension.sql
+[0m14:08:57.150390 [debug] [MainThread]: 1603: static parser failed on brand_performance/outclick_by_brand_int.sql
+[0m14:08:57.153703 [debug] [MainThread]: 1602: parser fallback to jinja rendering on brand_performance/outclick_by_brand_int.sql
+[0m14:08:57.190964 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.brand_performance
+- models.users
+[0m14:08:57.192855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d3d7ac1-6efb-458e-a3c0-34d77671306b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054f4a50>]}
+[0m14:08:57.196564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d3d7ac1-6efb-458e-a3c0-34d77671306b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055604d0>]}
+[0m14:08:57.196756 [info ] [MainThread]: Found 6 models, 4 tests, 0 snapshots, 0 analyses, 444 macros, 0 operations, 0 seed files, 7 sources, 0 exposures, 0 metrics, 0 groups
+[0m14:08:57.196870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d3d7ac1-6efb-458e-a3c0-34d77671306b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105427050>]}
+[0m14:08:57.197148 [debug] [MainThread]: Acquiring new postgres connection 'macro_generate_model_yaml'
+[0m14:08:57.197269 [debug] [MainThread]: Using postgres connection "macro_generate_model_yaml"
+[0m14:08:57.197369 [debug] [MainThread]: On macro_generate_model_yaml: BEGIN
+[0m14:08:57.197467 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:08:57.766178 [debug] [MainThread]: SQL status: BEGIN in 1.0 seconds
+[0m14:08:57.767905 [debug] [MainThread]: On macro_generate_model_yaml: COMMIT
+[0m14:08:57.768919 [debug] [MainThread]: Using postgres connection "macro_generate_model_yaml"
+[0m14:08:57.769794 [debug] [MainThread]: On macro_generate_model_yaml: COMMIT
+[0m14:08:57.821898 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:08:57.824046 [debug] [MainThread]: Postgres adapter: Error running SQL: macro generate_model_yaml
+[0m14:08:57.824236 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m14:08:57.824409 [debug] [MainThread]: On macro_generate_model_yaml: Close
+[0m14:08:57.824891 [error] [MainThread]: Encountered an error while running operation: Compilation Error
+  macro 'dbt_macro__generate_model_yaml' takes no keyword argument 'model_name'
+[0m14:08:57.828494 [debug] [MainThread]: Traceback (most recent call last):
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 302, in exception_handler
+    yield
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/jinja2/runtime.py", line 752, in __call__
+    raise TypeError(
+TypeError: macro 'dbt_macro__generate_model_yaml' takes no keyword argument 'model_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/task/run_operation.py", line 47, in run
+    self._run_unsafe()
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/task/run_operation.py", line 37, in _run_unsafe
+    res = adapter.execute_macro(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 1043, in execute_macro
+    result = macro_function(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 255, in call_macro
+    with self.exception_handler():
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 304, in exception_handler
+    raise CaughtMacroErrorWithNodeError(exc=e, node=self.macro)
+dbt.exceptions.CaughtMacroErrorWithNodeError: Compilation Error
+  macro 'dbt_macro__generate_model_yaml' takes no keyword argument 'model_name'
+
+[0m14:08:57.828832 [debug] [MainThread]: Command `dbt run-operation` failed at 14:08:57.828771 after 1.12 seconds
+[0m14:08:57.828972 [debug] [MainThread]: Connection 'macro_generate_model_yaml' was properly closed.
+[0m14:08:57.829121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104de3e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105410910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b1e890>]}
+[0m14:08:57.829294 [debug] [MainThread]: Flushing usage events
+[0m14:14:39.935350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106799ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067a33d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067a3a50>]}
+
+
+============================== 14:14:39.936888 | e2c4b37e-7438-4214-ad5e-e3aec197d7d3 ==============================
+[0m14:14:39.936888 [info ] [MainThread]: Running with dbt=1.5.4
+[0m14:14:39.937198 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'version_check': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_path': '/Users/danila/github/dbt/logs', 'partial_parse': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'write_json': 'True', 'quiet': 'False', 'target_path': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'profiles_dir': '/Users/danila/.dbt', 'warn_error': 'None', 'fail_fast': 'False', 'printer_width': '80'}
+[0m14:14:39.967813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2c4b37e-7438-4214-ad5e-e3aec197d7d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106256910>]}
+[0m14:14:39.974157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e2c4b37e-7438-4214-ad5e-e3aec197d7d3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10679c2d0>]}
+[0m14:14:39.974651 [info ] [MainThread]: Registered adapter: postgres=1.5.4
+[0m14:14:39.988146 [debug] [MainThread]: checksum: 5d6b65bf0937b31c1cb174f5650843d5ea9953bdf3de7df3d9ed5979670d6d21, vars: {}, profile: , target: , version: 1.5.4
+[0m14:14:40.012193 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading campaign_perfomance: staging/scraper/stg_scraper__records_2.yml - Runtime Error
+    unacceptable character #x001b: control characters are not allowed
+      in "<unicode string>", position 0
+[0m14:14:40.012585 [debug] [MainThread]: Command `dbt run-operation` failed at 14:14:40.012526 after 0.09 seconds
+[0m14:14:40.012745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10679dc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067a3790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf4190>]}
+[0m14:14:40.012906 [debug] [MainThread]: Flushing usage events
+[0m14:15:01.888164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107104a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10710b650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10710bd10>]}
+
+
+============================== 14:15:01.889403 | 0ad68029-8718-4592-829f-78654e45c54d ==============================
+[0m14:15:01.889403 [info ] [MainThread]: Running with dbt=1.5.4
+[0m14:15:01.889752 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_colors': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'no_print': 'None', 'introspect': 'True', 'log_path': '/Users/danila/github/dbt/logs', 'log_format': 'default', 'write_json': 'True', 'profiles_dir': '/Users/danila/.dbt', 'partial_parse': 'True', 'target_path': 'None', 'version_check': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'debug': 'False', 'fail_fast': 'False'}
+[0m14:15:01.917382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0ad68029-8718-4592-829f-78654e45c54d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107146750>]}
+[0m14:15:01.923575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0ad68029-8718-4592-829f-78654e45c54d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bedb10>]}
+[0m14:15:01.923833 [info ] [MainThread]: Registered adapter: postgres=1.5.4
+[0m14:15:01.936355 [debug] [MainThread]: checksum: 5d6b65bf0937b31c1cb174f5650843d5ea9953bdf3de7df3d9ed5979670d6d21, vars: {}, profile: , target: , version: 1.5.4
+[0m14:15:01.973733 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 0 files added, 0 files changed.
+[0m14:15:01.976306 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.brand_performance
+- models.users
+[0m14:15:01.978964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0ad68029-8718-4592-829f-78654e45c54d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10757de50>]}
+[0m14:15:01.982861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0ad68029-8718-4592-829f-78654e45c54d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075be610>]}
+[0m14:15:01.983076 [info ] [MainThread]: Found 6 models, 4 tests, 0 snapshots, 0 analyses, 444 macros, 0 operations, 0 seed files, 7 sources, 0 exposures, 0 metrics, 0 groups
+[0m14:15:01.983249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0ad68029-8718-4592-829f-78654e45c54d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107104a90>]}
+[0m14:15:01.983555 [debug] [MainThread]: Acquiring new postgres connection 'macro_generate_source'
+[0m14:15:01.983678 [debug] [MainThread]: Using postgres connection "macro_generate_source"
+[0m14:15:01.983776 [debug] [MainThread]: On macro_generate_source: BEGIN
+[0m14:15:01.983861 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:15:02.467316 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:15:02.469235 [debug] [MainThread]: On macro_generate_source: COMMIT
+[0m14:15:02.470212 [debug] [MainThread]: Using postgres connection "macro_generate_source"
+[0m14:15:02.471114 [debug] [MainThread]: On macro_generate_source: COMMIT
+[0m14:15:02.518159 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:15:02.529836 [debug] [MainThread]: Postgres adapter: Error running SQL: macro generate_source
+[0m14:15:02.530334 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m14:15:02.530651 [debug] [MainThread]: On macro_generate_source: Close
+[0m14:15:02.531425 [error] [MainThread]: Encountered an error while running operation: Compilation Error
+  macro 'dbt_macro__generate_source' takes no keyword argument 'table_name'
+[0m14:15:02.536186 [debug] [MainThread]: Traceback (most recent call last):
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 302, in exception_handler
+    yield
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/jinja2/runtime.py", line 752, in __call__
+    raise TypeError(
+TypeError: macro 'dbt_macro__generate_source' takes no keyword argument 'table_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/task/run_operation.py", line 47, in run
+    self._run_unsafe()
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/task/run_operation.py", line 37, in _run_unsafe
+    res = adapter.execute_macro(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/adapters/base/impl.py", line 1043, in execute_macro
+    result = macro_function(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 255, in call_macro
+    with self.exception_handler():
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/opt/anaconda3/envs/dbt_env2/lib/python3.11/site-packages/dbt/clients/jinja.py", line 304, in exception_handler
+    raise CaughtMacroErrorWithNodeError(exc=e, node=self.macro)
+dbt.exceptions.CaughtMacroErrorWithNodeError: Compilation Error
+  macro 'dbt_macro__generate_source' takes no keyword argument 'table_name'
+
+[0m14:15:02.536814 [debug] [MainThread]: Command `dbt run-operation` failed at 14:15:02.536714 after 0.66 seconds
+[0m14:15:02.537063 [debug] [MainThread]: Connection 'macro_generate_source' was properly closed.
+[0m14:15:02.537330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103135d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a70590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fbffd0>]}
+[0m14:15:02.537628 [debug] [MainThread]: Flushing usage events
