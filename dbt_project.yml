@@ -43,4 +43,4 @@ models:
       +materialized: table
     staging/scraper:
       +enabled: true
-      +materialized: view
+      +materialized: table
