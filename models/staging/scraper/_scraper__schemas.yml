@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_scraper__records
+    description: This is my table
+    columns:
+      - name: grain_id
+        description: The primary key of the table
+        tests:
+          - unique, not_null
+
+

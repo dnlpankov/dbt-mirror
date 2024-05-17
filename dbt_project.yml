@@ -41,3 +41,6 @@ models:
     brand_performance:
       +enabled: true
       +materialized: table
+    staging/scraper:
+      +enabled: true
+      +materialized: view
