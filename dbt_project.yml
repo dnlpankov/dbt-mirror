@@ -41,6 +41,10 @@ models:
     brand_performance:
       +enabled: true
       +materialized: table
-    staging/scraper:
+    marts:
       +enabled: true
       +materialized: table
+    staging:
+      scraper:
+        +enabled: true
+        +materialized: table
