@@ -6,4 +6,4 @@ logs/
 datadiff.toml
 .DS_Store
 .sqlfluff
-
+.sqlfluffignore

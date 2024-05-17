@@ -30614,3 +30614,2501 @@ dbt.exceptions.CaughtMacroErrorWithNodeError: Compilation Error
 [0m14:15:02.537063 [debug] [MainThread]: Connection 'macro_generate_source' was properly closed.
 [0m14:15:02.537330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103135d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a70590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fbffd0>]}
 [0m14:15:02.537628 [debug] [MainThread]: Flushing usage events
+[0m15:38:00.471768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f967d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a89950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104fa7d50>]}
+
+
+============================== 15:38:00.473269 | a5b0ac84-897f-4f3e-9eca-c321467ff44a ==============================
+[0m15:38:00.473269 [info ] [MainThread]: Running with dbt=1.5.4
+[0m15:38:00.473575 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'no_print': 'None', 'version_check': 'True', 'warn_error': 'None', 'quiet': 'False', 'target_path': 'None', 'log_format': 'default', 'fail_fast': 'False', 'use_colors': 'True', 'profiles_dir': '/Users/danila/.dbt', 'debug': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'write_json': 'True', 'introspect': 'True', 'log_path': '/Users/danila/github/dbt/logs', 'indirect_selection': 'eager'}
+[0m15:38:00.504922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b4a290>]}
+[0m15:38:00.511084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104fb7dd0>]}
+[0m15:38:00.511508 [info ] [MainThread]: Registered adapter: postgres=1.5.4
+[0m15:38:00.525189 [debug] [MainThread]: checksum: 5d6b65bf0937b31c1cb174f5650843d5ea9953bdf3de7df3d9ed5979670d6d21, vars: {}, profile: , target: , version: 1.5.4
+[0m15:38:00.566338 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:38:00.566550 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:38:00.566846 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.brand_performance
+- models.users
+- models.staging/scraper
+[0m15:38:00.569306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105548410>]}
+[0m15:38:00.574364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10546fe90>]}
+[0m15:38:00.574554 [info ] [MainThread]: Found 7 models, 5 tests, 0 snapshots, 0 analyses, 444 macros, 0 operations, 0 seed files, 14 sources, 0 exposures, 0 metrics, 0 groups
+[0m15:38:00.574715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10246a710>]}
+[0m15:38:00.575493 [info ] [MainThread]: 
+[0m15:38:00.575815 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:38:00.576286 [debug] [ThreadPool]: Acquiring new postgres connection 'list_deep-analysis-console'
+[0m15:38:00.580474 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console"
+[0m15:38:00.580702 [debug] [ThreadPool]: On list_deep-analysis-console: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "list_deep-analysis-console"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:38:00.580836 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:38:01.133057 [debug] [ThreadPool]: SQL status: SELECT 8 in 1.0 seconds
+[0m15:38:01.137983 [debug] [ThreadPool]: On list_deep-analysis-console: Close
+[0m15:38:01.141553 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_deep-analysis-console, now list_deep-analysis-console_danila)
+[0m15:38:01.149870 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console_danila"
+[0m15:38:01.150439 [debug] [ThreadPool]: On list_deep-analysis-console_danila: BEGIN
+[0m15:38:01.150755 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:38:01.645452 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:01.647088 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console_danila"
+[0m15:38:01.648213 [debug] [ThreadPool]: On list_deep-analysis-console_danila: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "list_deep-analysis-console_danila"} */
+select
+      'deep-analysis-console' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'danila'
+    union all
+    select
+      'deep-analysis-console' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'danila'
+  
+[0m15:38:01.700675 [debug] [ThreadPool]: SQL status: SELECT 19 in 0.0 seconds
+[0m15:38:01.702441 [debug] [ThreadPool]: On list_deep-analysis-console_danila: ROLLBACK
+[0m15:38:01.751808 [debug] [ThreadPool]: On list_deep-analysis-console_danila: Close
+[0m15:38:01.758001 [debug] [MainThread]: Using postgres connection "master"
+[0m15:38:01.758236 [debug] [MainThread]: On master: BEGIN
+[0m15:38:01.758416 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:38:02.140018 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:02.141600 [debug] [MainThread]: Using postgres connection "master"
+[0m15:38:02.142399 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:38:02.196671 [debug] [MainThread]: SQL status: SELECT 46 in 0.0 seconds
+[0m15:38:02.201877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104fa2310>]}
+[0m15:38:02.202782 [debug] [MainThread]: On master: ROLLBACK
+[0m15:38:02.248730 [debug] [MainThread]: Using postgres connection "master"
+[0m15:38:02.249815 [debug] [MainThread]: On master: BEGIN
+[0m15:38:02.342167 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:02.343200 [debug] [MainThread]: On master: COMMIT
+[0m15:38:02.343828 [debug] [MainThread]: Using postgres connection "master"
+[0m15:38:02.344354 [debug] [MainThread]: On master: COMMIT
+[0m15:38:02.390198 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:02.391261 [debug] [MainThread]: On master: Close
+[0m15:38:02.394041 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:38:02.394748 [info ] [MainThread]: 
+[0m15:38:02.404159 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:38:02.404842 [info ] [Thread-1 (]: 1 of 6 START sql view model danila.clicks_to_clients_fct ....................... [RUN]
+[0m15:38:02.405711 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_deep-analysis-console_danila, now model.campaign_perfomance.clicks_to_clients_fct)
+[0m15:38:02.406085 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:38:02.412370 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:02.413306 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.clicks_to_clients_fct (compile): 15:38:02.406321 => 15:38:02.413102
+[0m15:38:02.413635 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:38:02.437679 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:02.438208 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:02.438383 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: BEGIN
+[0m15:38:02.438555 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:38:02.864943 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:02.866859 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:02.868060 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+
+  create view "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_tmp"
+    
+    
+  as (
+    select
+    timestamp as timestamp_cet
+    , deal_id
+    , user_id
+    , brand_name as brand_id
+    , geo as country_code
+    -- , campaign_group_id
+    , event_type as event_id
+    -- , campaign_vertical_id
+    -- , google_ads_campaign_id
+    -- , traffic_source_id
+    , adclickid as ad_click_id
+    -- , moneypage_id
+    -- , site_id
+    -- , affiliate_account_id
+    -- , offer_id
+from postbacks_outgoing
+  );
+[0m15:38:02.925092 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:38:02.940337 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:02.940980 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+alter table "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_tmp" rename to "clicks_to_clients_fct"
+[0m15:38:02.993448 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:03.015215 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: COMMIT
+[0m15:38:03.015634 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:03.015947 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: COMMIT
+[0m15:38:03.068137 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:03.077535 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:38:03.078100 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+drop view if exists "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_backup" cascade
+[0m15:38:03.155996 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:38:03.160433 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.clicks_to_clients_fct (execute): 15:38:02.413840 => 15:38:03.159812
+[0m15:38:03.161629 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: Close
+[0m15:38:03.163363 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105645d10>]}
+[0m15:38:03.164190 [info ] [Thread-1 (]: 1 of 6 OK created sql view model danila.clicks_to_clients_fct .................. [[32mCREATE VIEW[0m in 0.76s]
+[0m15:38:03.165216 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:38:03.165693 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.deals_dimension
+[0m15:38:03.166295 [info ] [Thread-1 (]: 2 of 6 START sql view model danila.deals_dimension ............................. [RUN]
+[0m15:38:03.167098 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.clicks_to_clients_fct, now model.campaign_perfomance.deals_dimension)
+[0m15:38:03.167466 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.deals_dimension
+[0m15:38:03.169255 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.170120 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.deals_dimension (compile): 15:38:03.167701 => 15:38:03.169924
+[0m15:38:03.170445 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.deals_dimension
+[0m15:38:03.174183 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.174833 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.175090 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: BEGIN
+[0m15:38:03.175332 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:38:03.579211 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:03.580437 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.581736 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+
+  create view "deep-analysis-console"."danila"."deals_dimension__dbt_tmp"
+    
+    
+  as (
+    with main as (
+    select id
+        , brand_name
+        , geo as country_code
+        , deal_start_date as start_date
+        , deal_end_date as end_date
+        , deal_cpa as first_time_deposit_commission
+        , deal_gtee as guaranteed_commission
+        , deal_revshare as revenue_share_commission
+        , campaign_name as campaign_group
+        , gap_campaign_name as google_ads_campaign_id
+        -- , traffic_types as betting_type
+        -- , traffic_sources
+    from deals
+)
+
+select * from main
+where id=2085
+-- select betting_type, traffic_sources, count(id)
+-- from main
+-- group by betting_type, traffic_sources
+  );
+[0m15:38:03.635449 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:38:03.641626 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.642143 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+alter table "deep-analysis-console"."danila"."deals_dimension__dbt_tmp" rename to "deals_dimension"
+[0m15:38:03.691468 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:03.693947 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: COMMIT
+[0m15:38:03.694430 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.694851 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: COMMIT
+[0m15:38:03.744040 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:03.748492 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:38:03.749117 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+drop view if exists "deep-analysis-console"."danila"."deals_dimension__dbt_backup" cascade
+[0m15:38:03.798698 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:38:03.801483 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.deals_dimension (execute): 15:38:03.170643 => 15:38:03.801158
+[0m15:38:03.802168 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: Close
+[0m15:38:03.803819 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054cbf50>]}
+[0m15:38:03.804824 [info ] [Thread-1 (]: 2 of 6 OK created sql view model danila.deals_dimension ........................ [[32mCREATE VIEW[0m in 0.64s]
+[0m15:38:03.805883 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.deals_dimension
+[0m15:38:03.806600 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.outclick_by_brand_int
+[0m15:38:03.807433 [info ] [Thread-1 (]: 3 of 6 START sql table model danila.outclick_by_brand_int ...................... [RUN]
+[0m15:38:03.808419 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.deals_dimension, now model.campaign_perfomance.outclick_by_brand_int)
+[0m15:38:03.808898 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.outclick_by_brand_int
+[0m15:38:03.828975 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:03.831072 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_by_brand_int (compile): 15:38:03.809235 => 15:38:03.830881
+[0m15:38:03.831369 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.outclick_by_brand_int
+[0m15:38:03.845449 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:03.846332 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:03.846543 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: BEGIN
+[0m15:38:03.846738 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:38:04.229590 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:04.231246 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:04.233016 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+
+  
+    
+
+  create  table "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/campaign_level_data.sql
+
+with stg_records as (
+    select 
+    --'records' as source,
+    date_parsed as date, 
+    geo as country_code, 
+    CASE  
+        WHEN campaign_name::text = 'jpluckyslotsonline'::text THEN 'luckyslotsonline'::character varying
+        WHEN campaign_name::text = 'ficashstormslots'::text THEN 'cashstormslots'::character varying
+        WHEN campaign_name::text = 'goldenlion'::text THEN 'goldenliongames'::character varying
+        ELSE campaign_name
+    END as campaign_name, 
+    lower(adgroup_name) as ga_campaign_name, 
+    CASE 
+        when right(brand_name,6)<>'sports' then 'casino'
+        when right(brand_name,6)='sports' then 'sports'
+        else 'other'
+    END as campaign_vertical,
+    CASE
+        WHEN campaign_name::text = 'email' THEN brand_name || ' email'
+        WHEN campaign_name::text = 'PA' THEN brand_name || ' PA'
+        ELSE brand_name
+    END as brand_name, 
+    NULL as outclicks, 
+    NULL as unique_outclicks, 
+    NULL as avg_list_position, 
+    NULL as pos_list,
+    registrations, --sum(registrations) as signups, 
+    cpa_count, --sum(cpa_count) as cpa_count, 
+    cpa_commissions, --sum(cpa_commissions) AS cpa_commissions,
+    total_commission, -- coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
+    gtee_count,
+    gtee_commissions,
+    deposits --sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
+    --avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
+from "deep-analysis-console"."console"."records" records
+where date_parsed > '2023-01-01'
+),
+
+ main as (
+    select 
+        --date(timestamp - interval '2 hours') as date, 
+        'matomo' as source,
+        
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ as date,
+        "left"(matomo_actions.eventname::text, 2) as country_code, 
+        lower(sitename) as campaign_name, 
+        campaignname as ga_campaign_name,
+        CASE 
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical, 
+        "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
+        count(matomo_actions.id) as outclicks,
+        count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
+        round(avg(eventvalue), 2) AS avg_list_position,
+        string_agg(DISTINCT eventvalue::character varying::text, ';'::text) AS pos_list,
+        NULL as signups, NULL as cpa_count, NULL as cpa_commissions, NULL as revshare_commissions, NULL as gtee_count,
+        NULL as gtee_commissions, NULL as avg_deposit_amount
+    from "deep-analysis-console"."console"."matomo_actions" matomo_actions
+    left join "deep-analysis-console"."console"."matomo_visits" matomo_visits 
+    on matomo_actions.matomo_visit_id=matomo_visits.id
+    where 
+        matomo_actions.type = 'event' 
+        AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
+        --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+        --and date(timestamp - interval '2 hours') >'2023-01-01'
+        and 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ >'2023-01-01'
+    --[[ and parse_matomo_timestamp(timestamp) in ( select date_parsed from calendar where  ) ]]
+    -- [[ and "left"(matomo_actions.eventname::text, 2) in ( select distinct geo from campaign_names_mapping WHERE  ) ]]
+    -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE )]]
+    -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE )]]
+    -- [[ and "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) in ( select distinct brand_name from records WHERE  ) ]]
+    group by source, campaign_name, campaignname, campaign_vertical, 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+, brand_name, country_code
+    /*affiliate records aggregated data from records table*/
+    union all
+    select 
+        'records' as source,
+        date, 
+        country_code, 
+        campaign_name, 
+	    ga_campaign_name, 
+        campaign_vertical, 
+        brand_name,
+        NULL as outclicks, 
+        NULL as unique_outclicks, 
+        NULL as avg_list_position, 
+        NULL as pos_list,
+        sum(registrations) as signups, 
+        sum(cpa_count) as cpa_count, 
+        sum(cpa_commissions) AS cpa_commissions,
+        coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
+        sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
+        avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
+    from stg_records 
+        -- right(brand_name,6)<>'sports'
+        -- and date_parsed > '2023-12-31'
+    --[[ and date_parsed in ( select date_parsed from calendar where  ) ]]
+    -- [[ and geo in (select distinct geo from campaign_names_mapping WHERE ) ]]
+    -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE ) ]]
+    -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE ) ]]
+    -- [[ and  ]]
+    group by source, date, country_code, campaign_name, ga_campaign_name, campaign_vertical, brand_name
+)
+
+select *,
+md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(source as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id
+from main
+  );
+  
+[0m15:38:19.735097 [debug] [Thread-1 (]: SQL status: SELECT 508856 in 16.0 seconds
+[0m15:38:19.741373 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:19.742792 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+alter table "deep-analysis-console"."danila"."outclick_by_brand_int" rename to "outclick_by_brand_int__dbt_backup"
+[0m15:38:19.790559 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:19.798635 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:19.799109 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+alter table "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_tmp" rename to "outclick_by_brand_int"
+[0m15:38:19.844876 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:19.865556 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: COMMIT
+[0m15:38:19.866467 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:19.866982 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: COMMIT
+[0m15:38:19.913494 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:19.919601 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:38:19.920813 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+drop table if exists "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_backup" cascade
+[0m15:38:19.994421 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m15:38:19.999860 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_by_brand_int (execute): 15:38:03.831538 => 15:38:19.999263
+[0m15:38:20.000279 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: Close
+[0m15:38:20.001310 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105693650>]}
+[0m15:38:20.002724 [info ] [Thread-1 (]: 3 of 6 OK created sql table model danila.outclick_by_brand_int ................. [[32mSELECT 508856[0m in 16.19s]
+[0m15:38:20.003404 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.outclick_by_brand_int
+[0m15:38:20.003884 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.outclick_cost_int
+[0m15:38:20.004466 [info ] [Thread-1 (]: 4 of 6 START sql table model danila.outclick_cost_int .......................... [RUN]
+[0m15:38:20.005494 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.outclick_by_brand_int, now model.campaign_perfomance.outclick_cost_int)
+[0m15:38:20.006071 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.outclick_cost_int
+[0m15:38:20.016853 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:20.019499 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_cost_int (compile): 15:38:20.006616 => 15:38:20.019101
+[0m15:38:20.020007 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.outclick_cost_int
+[0m15:38:20.025496 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:20.026586 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:20.027229 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: BEGIN
+[0m15:38:20.027845 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:38:20.523417 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:20.524937 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:20.526767 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+
+  
+    
+
+  create  table "deep-analysis-console"."danila"."outclick_cost_int__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/campaign_level_data.sql
+
+with main as 
+(
+    select
+        'matomo' as source, --matomo
+        
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ as date, --matomo update
+        "left"(matomo_actions.eventname::text, 2) as country_code, 
+        lower(sitename) as campaign_name, 
+        campaignname as ga_campaign_name, 
+        CASE 
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical,
+        "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
+        count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
+        NULL as cost
+    from "deep-analysis-console"."console"."matomo_actions" matomo_actions
+    left join "deep-analysis-console"."console"."matomo_visits" matomo_visits
+    on matomo_actions.matomo_visit_id=matomo_visits.id
+    where matomo_actions.type = 'event' 
+        AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
+        --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+        AND 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+>'2023-01-01' --matomo
+    group by campaign_name, campaignname, campaign_vertical, 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+, brand_name, country_code
+    union all
+    select
+        'records_gap_campaigns' as source, --'records'
+        day as date, 
+        geo as country_code, 
+        console_campaign_name as campaign_name, 
+        lower(campaign) as ga_campaign_name, 
+        CASE 
+            when campaign_names_mapping.campaign_vertical='casino' then 'casino'
+            when campaign_names_mapping.campaign_vertical='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical,
+        NULL as brand_name, 
+        NULL as unique_outclicks, 
+        sum(cost) as cost
+    from "deep-analysis-console"."console"."records_gap_campaigns"  records_gap_campaigns
+    left join "deep-analysis-console"."console"."campaign_names_mapping" campaign_names_mapping on campaign_names_mapping.gap_campaign_name=records_gap_campaigns.campaign
+    where day >'2023-01-01'
+        -- campaign_names_mapping.campaign_vertical='casino'
+        -- and day >'2023-12-31' --matomo
+
+    group by day, country_code, campaign_name, ga_campaign_name, campaign_vertical
+)
+
+
+select *,
+md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(source as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id
+
+from main
+
+
+-- Checking for duplicates
+-- test as (
+--     select 
+--     md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id, 
+--     *
+-- from main
+-- )
+
+-- select * 
+-- from test
+-- left join (select id, count(*) from test group by id having count(*)>1) as duplicates on test.id=duplicates.id
+-- where duplicates.id is not null --and cost is not null and test.id='df85a909516d6442b4f696089262f04a'
+  );
+  
+[0m15:38:28.948820 [debug] [Thread-1 (]: SQL status: SELECT 145589 in 8.0 seconds
+[0m15:38:28.957765 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:28.958959 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+alter table "deep-analysis-console"."danila"."outclick_cost_int" rename to "outclick_cost_int__dbt_backup"
+[0m15:38:29.013470 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:29.017486 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:29.018085 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+alter table "deep-analysis-console"."danila"."outclick_cost_int__dbt_tmp" rename to "outclick_cost_int"
+[0m15:38:29.072190 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:29.078824 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: COMMIT
+[0m15:38:29.080056 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:29.081002 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: COMMIT
+[0m15:38:29.135488 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:29.139850 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:38:29.141245 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+drop table if exists "deep-analysis-console"."danila"."outclick_cost_int__dbt_backup" cascade
+[0m15:38:29.221631 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m15:38:29.224088 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_cost_int (execute): 15:38:20.020257 => 15:38:29.223869
+[0m15:38:29.224606 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: Close
+[0m15:38:29.225715 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10540bc50>]}
+[0m15:38:29.226501 [info ] [Thread-1 (]: 4 of 6 OK created sql table model danila.outclick_cost_int ..................... [[32mSELECT 145589[0m in 9.22s]
+[0m15:38:29.227103 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.outclick_cost_int
+[0m15:38:29.227532 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.stg_scraper__records
+[0m15:38:29.228578 [info ] [Thread-1 (]: 5 of 6 START sql view model danila.stg_scraper__records ........................ [RUN]
+[0m15:38:29.229688 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.outclick_cost_int, now model.campaign_perfomance.stg_scraper__records)
+[0m15:38:29.230016 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.stg_scraper__records
+[0m15:38:29.235913 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.237400 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.stg_scraper__records (compile): 15:38:29.230202 => 15:38:29.237055
+[0m15:38:29.237825 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.stg_scraper__records
+[0m15:38:29.243063 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.244529 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.245195 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: BEGIN
+[0m15:38:29.245732 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:38:29.695764 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:29.697508 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.699428 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+
+  create view "deep-analysis-console"."danila"."stg_scraper__records__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/scraper/stg_scraper__records.sql
+
+with source as (
+    select * from "deep-analysis-console"."console"."records"
+)
+
+, transformed as (
+    select
+        id
+        , created_at
+        , user_id
+        , deal_id
+        , date_parsed as date_cet
+        , click_id
+        , geo as country_code
+        , registrations as signed_up
+        , cpa_count as deposited_first_time
+        , gtee_count
+        , cpa_commissions as acquisition_commission
+        , deposits as acquisition_deposit
+        , total_commission
+        , gtee_commissions
+        , net_revenue
+        , revshare_commissions
+        , lower(adgroup_name) as ga_campaign_name
+        , case
+            when right(brand_name, 6) <> 'sports' then 'casino'
+            when right(brand_name, 6) = 'sports' then 'sports'
+            else 'other'
+        end as campaign_vertical
+        , case
+            when campaign_name::text = 'email' then brand_name || ' email'
+            when campaign_name::text = 'PA' then brand_name || ' PA'
+            else brand_name
+        end as brand_name
+
+        , case
+            when campaign_name = 'jpluckyslotsonline' then 'luckyslotsonline'
+            when campaign_name = 'ficashstormslots' then 'cashstormslots'
+            when campaign_name = 'goldenlion' then 'goldenliongames'
+            else campaign_name
+        end as campaign_name
+    from source
+    where
+        date_parsed > '2024-03-31'
+        --and cpa_count > 0.5
+        --and deal_id is null
+        --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
+    --and user_id='ae4eb2f5ad8ebf29'
+    order by user_id, deal_id, date_parsed
+)
+
+-- Add grain_id
+
+, added_grain as (
+    select
+        *
+        , md5(user_id || deal_id || date_cet) as grain_id
+    from transformed
+)
+
+
+-- Identify duplicates by assigning row numbers
+, ranked_records as (
+    select
+        *
+        , row_number() over (
+            partition by grain_id -- columns that define a duplicate
+            order by id desc -- criteria to determine which record to keep
+        ) as duplicate_count
+    from added_grain
+)
+
+-- Filter out duplicates, keeping only the first occurrence
+, deduplicated_records as (
+    select *
+    from
+        ranked_records
+    where
+        duplicate_count = 1
+)
+
+select * from deduplicated_records
+
+
+
+--main where user_id='51a4a42eaaeb12f7' and deal_id='2609' and date_cet='2024-05-16'
+
+
+-- select user_id, deal_id, date_cet, count(id) as duplicates
+-- from main
+-- group by user_id, deal_id, date_cet
+-- having count(id)>1.1
+-- select user_id, date_parsed, registrations, depositing_customers, cpa_count
+
+-- from records
+-- where user_id='931800d1c75e2834'
+-- order by date_parsed
+
+
+-- with main as (
+--     select user_id, created_at, deal_id, date, date_parsed
+--         , case
+--             when date ~ '^\d{2}-\d{2}-\d{4}$' then to_date(date, 'DD-MM-YYYY')
+--             when date ~ '^\d{4}-\d{2}-\d{2}$' then to_date(date, 'YYYY-MM-DD')
+--             when date ~ '^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$' then to_timestamp(date, 'YYYY-MM-DD HH24:MI:SS')::date
+--             when date ~ '^\d{1,2}/\d{1,2}/\d{2} \d{1,2}:\d{2}:\d{2} (AM|PM)$' then to_timestamp(date, 'MM/DD/YY HH12:MI:SS AM')::date
+--             when date ~ '^\d{1,2}/\d{1,2}/\d{4} \d{1,2}:\d{2}:\d{2} (AM|PM)$' then to_timestamp(date, 'MM/DD/YYYY HH12:MI:SS AM')::date
+--             when date ~ '^\d{4}\.\d{2}\.\d{2}$' then to_date(date, 'YYYY.MM.DD')
+--             when date ~ '^\d{5}-\d{2}-\d{2}$' then to_date(substring(date from 1 for 4) || substring(date from 6), 'YYYY-MM-DD')
+--             else null
+--         end as transformed_date
+--     from records
+-- ),
+
+-- comparison as 
+-- (select
+--     *,
+--     (case
+--         when date_parsed = transformed_date then 1
+--         else 0
+--     end) as comparison
+-- from main)
+
+-- select * from comparison where comparison = 0 and date_parsed>'2024-04-30'
+-- select sum(comparison), count(comparison)
+-- from comparison
+-- where date_parsed>'2024-01-31'
+  );
+[0m15:38:29.760283 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:38:29.767128 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.767856 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+alter table "deep-analysis-console"."danila"."stg_scraper__records__dbt_tmp" rename to "stg_scraper__records"
+[0m15:38:29.820882 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:38:29.823998 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: COMMIT
+[0m15:38:29.824612 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.825039 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: COMMIT
+[0m15:38:29.878125 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:29.886121 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:38:29.887446 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+drop view if exists "deep-analysis-console"."danila"."stg_scraper__records__dbt_backup" cascade
+[0m15:38:29.941953 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:38:29.946984 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.stg_scraper__records (execute): 15:38:29.238093 => 15:38:29.946374
+[0m15:38:29.948144 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: Close
+[0m15:38:29.950995 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056ac790>]}
+[0m15:38:29.952951 [info ] [Thread-1 (]: 5 of 6 OK created sql view model danila.stg_scraper__records ................... [[32mCREATE VIEW[0m in 0.72s]
+[0m15:38:29.954846 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.stg_scraper__records
+[0m15:38:29.956258 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.first_deposits_fct
+[0m15:38:29.957077 [info ] [Thread-1 (]: 6 of 6 START sql view model danila.first_deposits_fct .......................... [RUN]
+[0m15:38:29.959059 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.stg_scraper__records, now model.campaign_perfomance.first_deposits_fct)
+[0m15:38:29.959884 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.first_deposits_fct
+[0m15:38:29.968858 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.first_deposits_fct"
+[0m15:38:29.970784 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.first_deposits_fct (compile): 15:38:29.960331 => 15:38:29.970415
+[0m15:38:29.971435 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.first_deposits_fct
+[0m15:38:29.977998 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.first_deposits_fct"
+[0m15:38:29.979809 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m15:38:29.980332 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: BEGIN
+[0m15:38:29.980722 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:38:30.396631 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:30.398167 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m15:38:30.399421 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.first_deposits_fct"} */
+
+  create view "deep-analysis-console"."danila"."first_deposits_fct__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/scraper/stg_scraper__records.sql
+
+with source as (
+    select * from "deep-analysis-console"."danila"."stg_scraper__records"
+)
+
+, transformed as (
+    select
+        id--grain_id
+        , created_at
+        , user_id
+        , deal_id
+        , date_parsed as date_cet
+        , click_id
+        , geo as country_code
+        , registrations as signed_up
+        , cpa_count as deposited_first_time
+        , gtee_count
+        , cpa_commissions as acquisition_commission
+        , deposits as acquisition_deposit
+        , total_commission
+        , gtee_commissions
+        , net_revenue
+        , revshare_commissions
+        , ga_campaign_name
+        , campaign_vertical
+        , brand_name
+        , campaign_name
+    from source
+    where
+        date_parsed > '2024-03-31'
+        and deposited_first_time > 0.5
+        --and deal_id is null
+        --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
+    --and user_id='ae4eb2f5ad8ebf29'
+)
+  );
+[0m15:38:30.448385 [debug] [Thread-1 (]: Postgres adapter: Postgres error: syntax error at or near ")"
+LINE 43:   );
+           ^
+
+[0m15:38:30.449740 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: ROLLBACK
+[0m15:38:30.497842 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.first_deposits_fct (execute): 15:38:29.971847 => 15:38:30.496784
+[0m15:38:30.499363 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: Close
+[0m15:38:30.513723 [debug] [Thread-1 (]: Database Error in model first_deposits_fct (models/marts/first_deposits_fct.sql)
+  syntax error at or near ")"
+  LINE 43:   );
+             ^
+  compiled Code at target/run/campaign_perfomance/models/marts/first_deposits_fct.sql
+[0m15:38:30.514756 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5b0ac84-897f-4f3e-9eca-c321467ff44a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056e92d0>]}
+[0m15:38:30.515598 [error] [Thread-1 (]: 6 of 6 ERROR creating sql view model danila.first_deposits_fct ................. [[31mERROR[0m in 0.56s]
+[0m15:38:30.516339 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.first_deposits_fct
+[0m15:38:30.518296 [debug] [MainThread]: Using postgres connection "master"
+[0m15:38:30.518737 [debug] [MainThread]: On master: BEGIN
+[0m15:38:30.518988 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:38:30.897824 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:38:30.899087 [debug] [MainThread]: On master: COMMIT
+[0m15:38:30.899435 [debug] [MainThread]: Using postgres connection "master"
+[0m15:38:30.899694 [debug] [MainThread]: On master: COMMIT
+[0m15:38:30.946153 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:38:30.947177 [debug] [MainThread]: On master: Close
+[0m15:38:30.948593 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:38:30.949618 [debug] [MainThread]: Connection 'model.campaign_perfomance.first_deposits_fct' was properly closed.
+[0m15:38:30.950585 [info ] [MainThread]: 
+[0m15:38:30.951670 [info ] [MainThread]: Finished running 4 view models, 2 table models in 0 hours 0 minutes and 30.37 seconds (30.37s).
+[0m15:38:30.953747 [debug] [MainThread]: Command end result
+[0m15:38:30.972160 [info ] [MainThread]: 
+[0m15:38:30.973461 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m15:38:30.974103 [info ] [MainThread]: 
+[0m15:38:30.974612 [error] [MainThread]: [33mDatabase Error in model first_deposits_fct (models/marts/first_deposits_fct.sql)[0m
+[0m15:38:30.975203 [error] [MainThread]:   syntax error at or near ")"
+[0m15:38:30.975578 [error] [MainThread]:   LINE 43:   );
+[0m15:38:30.975855 [error] [MainThread]:              ^
+[0m15:38:30.976142 [error] [MainThread]:   compiled Code at target/run/campaign_perfomance/models/marts/first_deposits_fct.sql
+[0m15:38:30.976478 [info ] [MainThread]: 
+[0m15:38:30.976856 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m15:38:30.978008 [debug] [MainThread]: Command `dbt run` failed at 15:38:30.977777 after 30.52 seconds
+[0m15:38:30.978579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100fcb150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100fcb090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104fb7610>]}
+[0m15:38:30.979040 [debug] [MainThread]: Flushing usage events
+[0m15:39:09.659503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108804c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10881af10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10881b5d0>]}
+
+
+============================== 15:39:09.660767 | dab7199d-e13a-46c6-ac56-216f389a8475 ==============================
+[0m15:39:09.660767 [info ] [MainThread]: Running with dbt=1.5.4
+[0m15:39:09.661096 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'use_colors': 'True', 'log_path': '/Users/danila/github/dbt/logs', 'introspect': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'partial_parse': 'True', 'debug': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_experimental_parser': 'False', 'write_json': 'True', 'printer_width': '80', 'quiet': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'static_parser': 'True', 'profiles_dir': '/Users/danila/.dbt'}
+[0m15:39:09.689822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108804dd0>]}
+[0m15:39:09.696431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10834a710>]}
+[0m15:39:09.696724 [info ] [MainThread]: Registered adapter: postgres=1.5.4
+[0m15:39:09.709521 [debug] [MainThread]: checksum: 5d6b65bf0937b31c1cb174f5650843d5ea9953bdf3de7df3d9ed5979670d6d21, vars: {}, profile: , target: , version: 1.5.4
+[0m15:39:09.739676 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:39:09.739874 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:39:09.740168 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.users
+- models.brand_performance
+- models.staging/scraper
+[0m15:39:09.742702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087a9190>]}
+[0m15:39:09.746897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c892d0>]}
+[0m15:39:09.747075 [info ] [MainThread]: Found 7 models, 5 tests, 0 snapshots, 0 analyses, 444 macros, 0 operations, 0 seed files, 14 sources, 0 exposures, 0 metrics, 0 groups
+[0m15:39:09.747237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cda710>]}
+[0m15:39:09.747954 [info ] [MainThread]: 
+[0m15:39:09.748261 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:39:09.748740 [debug] [ThreadPool]: Acquiring new postgres connection 'list_deep-analysis-console'
+[0m15:39:09.752820 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console"
+[0m15:39:09.752974 [debug] [ThreadPool]: On list_deep-analysis-console: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "list_deep-analysis-console"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:39:09.753081 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:39:10.172938 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.0 seconds
+[0m15:39:10.176490 [debug] [ThreadPool]: On list_deep-analysis-console: Close
+[0m15:39:10.180385 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_deep-analysis-console, now list_deep-analysis-console_danila)
+[0m15:39:10.188879 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console_danila"
+[0m15:39:10.189409 [debug] [ThreadPool]: On list_deep-analysis-console_danila: BEGIN
+[0m15:39:10.189668 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:39:10.571102 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:10.573025 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console_danila"
+[0m15:39:10.574264 [debug] [ThreadPool]: On list_deep-analysis-console_danila: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "list_deep-analysis-console_danila"} */
+select
+      'deep-analysis-console' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'danila'
+    union all
+    select
+      'deep-analysis-console' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'danila'
+  
+[0m15:39:10.674597 [debug] [ThreadPool]: SQL status: SELECT 22 in 0.0 seconds
+[0m15:39:10.679138 [debug] [ThreadPool]: On list_deep-analysis-console_danila: ROLLBACK
+[0m15:39:10.751367 [debug] [ThreadPool]: On list_deep-analysis-console_danila: Close
+[0m15:39:10.766718 [debug] [MainThread]: Using postgres connection "master"
+[0m15:39:10.767204 [debug] [MainThread]: On master: BEGIN
+[0m15:39:10.767443 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:39:11.149194 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:11.151152 [debug] [MainThread]: Using postgres connection "master"
+[0m15:39:11.152158 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:39:11.206023 [debug] [MainThread]: SQL status: SELECT 49 in 0.0 seconds
+[0m15:39:11.210716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10881a010>]}
+[0m15:39:11.211817 [debug] [MainThread]: On master: ROLLBACK
+[0m15:39:11.258394 [debug] [MainThread]: Using postgres connection "master"
+[0m15:39:11.259323 [debug] [MainThread]: On master: BEGIN
+[0m15:39:11.369159 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:11.370596 [debug] [MainThread]: On master: COMMIT
+[0m15:39:11.371060 [debug] [MainThread]: Using postgres connection "master"
+[0m15:39:11.371354 [debug] [MainThread]: On master: COMMIT
+[0m15:39:11.417628 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:11.419216 [debug] [MainThread]: On master: Close
+[0m15:39:11.421670 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:39:11.422503 [info ] [MainThread]: 
+[0m15:39:11.429575 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:39:11.430608 [info ] [Thread-1 (]: 1 of 6 START sql view model danila.clicks_to_clients_fct ....................... [RUN]
+[0m15:39:11.431759 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_deep-analysis-console_danila, now model.campaign_perfomance.clicks_to_clients_fct)
+[0m15:39:11.432326 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:39:11.439558 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:11.440633 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.clicks_to_clients_fct (compile): 15:39:11.432580 => 15:39:11.440405
+[0m15:39:11.441008 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:39:11.466863 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:11.467413 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:11.467609 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: BEGIN
+[0m15:39:11.467793 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:39:11.865156 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:11.866477 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:11.867403 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+
+  create view "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_tmp"
+    
+    
+  as (
+    select
+    timestamp as timestamp_cet
+    , deal_id
+    , user_id
+    , brand_name as brand_id
+    , geo as country_code
+    -- , campaign_group_id
+    , event_type as event_id
+    -- , campaign_vertical_id
+    -- , google_ads_campaign_id
+    -- , traffic_source_id
+    , adclickid as ad_click_id
+    -- , moneypage_id
+    -- , site_id
+    -- , affiliate_account_id
+    -- , offer_id
+from postbacks_outgoing
+  );
+[0m15:39:11.919876 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:39:11.933462 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:11.934345 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+alter table "deep-analysis-console"."danila"."clicks_to_clients_fct" rename to "clicks_to_clients_fct__dbt_backup"
+[0m15:39:11.984231 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:11.991224 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:11.991906 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+alter table "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_tmp" rename to "clicks_to_clients_fct"
+[0m15:39:12.041141 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:12.063453 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: COMMIT
+[0m15:39:12.063948 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:12.064271 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: COMMIT
+[0m15:39:12.113274 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:12.120601 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m15:39:12.121005 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+drop view if exists "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_backup" cascade
+[0m15:39:12.171025 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:39:12.174410 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.clicks_to_clients_fct (execute): 15:39:11.441216 => 15:39:12.174078
+[0m15:39:12.175161 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: Close
+[0m15:39:12.176759 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d33650>]}
+[0m15:39:12.177888 [info ] [Thread-1 (]: 1 of 6 OK created sql view model danila.clicks_to_clients_fct .................. [[32mCREATE VIEW[0m in 0.75s]
+[0m15:39:12.178896 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.clicks_to_clients_fct
+[0m15:39:12.179468 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.deals_dimension
+[0m15:39:12.180118 [info ] [Thread-1 (]: 2 of 6 START sql view model danila.deals_dimension ............................. [RUN]
+[0m15:39:12.180967 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.clicks_to_clients_fct, now model.campaign_perfomance.deals_dimension)
+[0m15:39:12.181362 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.deals_dimension
+[0m15:39:12.184398 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.185549 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.deals_dimension (compile): 15:39:12.181620 => 15:39:12.185365
+[0m15:39:12.185957 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.deals_dimension
+[0m15:39:12.190646 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.191483 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.191832 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: BEGIN
+[0m15:39:12.192130 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:39:12.574767 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:12.576351 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.577564 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+
+  create view "deep-analysis-console"."danila"."deals_dimension__dbt_tmp"
+    
+    
+  as (
+    with main as (
+    select id
+        , brand_name
+        , geo as country_code
+        , deal_start_date as start_date
+        , deal_end_date as end_date
+        , deal_cpa as first_time_deposit_commission
+        , deal_gtee as guaranteed_commission
+        , deal_revshare as revenue_share_commission
+        , campaign_name as campaign_group
+        , gap_campaign_name as google_ads_campaign_id
+        -- , traffic_types as betting_type
+        -- , traffic_sources
+    from deals
+)
+
+select * from main
+where id=2085
+-- select betting_type, traffic_sources, count(id)
+-- from main
+-- group by betting_type, traffic_sources
+  );
+[0m15:39:12.628231 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:39:12.635718 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.636393 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+alter table "deep-analysis-console"."danila"."deals_dimension" rename to "deals_dimension__dbt_backup"
+[0m15:39:12.683629 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:12.691141 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.691908 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+alter table "deep-analysis-console"."danila"."deals_dimension__dbt_tmp" rename to "deals_dimension"
+[0m15:39:12.738609 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:12.741028 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: COMMIT
+[0m15:39:12.741487 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.741847 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: COMMIT
+[0m15:39:12.788701 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:12.795344 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m15:39:12.796214 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+drop view if exists "deep-analysis-console"."danila"."deals_dimension__dbt_backup" cascade
+[0m15:39:12.844347 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:39:12.847995 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.deals_dimension (execute): 15:39:12.186203 => 15:39:12.847651
+[0m15:39:12.848648 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: Close
+[0m15:39:12.849939 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108cd1ad0>]}
+[0m15:39:12.850854 [info ] [Thread-1 (]: 2 of 6 OK created sql view model danila.deals_dimension ........................ [[32mCREATE VIEW[0m in 0.67s]
+[0m15:39:12.851781 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.deals_dimension
+[0m15:39:12.852329 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.outclick_by_brand_int
+[0m15:39:12.852959 [info ] [Thread-1 (]: 3 of 6 START sql table model danila.outclick_by_brand_int ...................... [RUN]
+[0m15:39:12.854006 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.deals_dimension, now model.campaign_perfomance.outclick_by_brand_int)
+[0m15:39:12.854478 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.outclick_by_brand_int
+[0m15:39:12.876572 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:12.877470 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_by_brand_int (compile): 15:39:12.854941 => 15:39:12.877291
+[0m15:39:12.877783 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.outclick_by_brand_int
+[0m15:39:12.893290 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:12.893844 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:12.894041 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: BEGIN
+[0m15:39:12.894220 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:39:13.278130 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:13.279576 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:13.280744 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+
+  
+    
+
+  create  table "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/campaign_level_data.sql
+
+with stg_records as (
+    select 
+    --'records' as source,
+    date_parsed as date, 
+    geo as country_code, 
+    CASE  
+        WHEN campaign_name::text = 'jpluckyslotsonline'::text THEN 'luckyslotsonline'::character varying
+        WHEN campaign_name::text = 'ficashstormslots'::text THEN 'cashstormslots'::character varying
+        WHEN campaign_name::text = 'goldenlion'::text THEN 'goldenliongames'::character varying
+        ELSE campaign_name
+    END as campaign_name, 
+    lower(adgroup_name) as ga_campaign_name, 
+    CASE 
+        when right(brand_name,6)<>'sports' then 'casino'
+        when right(brand_name,6)='sports' then 'sports'
+        else 'other'
+    END as campaign_vertical,
+    CASE
+        WHEN campaign_name::text = 'email' THEN brand_name || ' email'
+        WHEN campaign_name::text = 'PA' THEN brand_name || ' PA'
+        ELSE brand_name
+    END as brand_name, 
+    NULL as outclicks, 
+    NULL as unique_outclicks, 
+    NULL as avg_list_position, 
+    NULL as pos_list,
+    registrations, --sum(registrations) as signups, 
+    cpa_count, --sum(cpa_count) as cpa_count, 
+    cpa_commissions, --sum(cpa_commissions) AS cpa_commissions,
+    total_commission, -- coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
+    gtee_count,
+    gtee_commissions,
+    deposits --sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
+    --avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
+from "deep-analysis-console"."console"."records" records
+where date_parsed > '2023-01-01'
+),
+
+ main as (
+    select 
+        --date(timestamp - interval '2 hours') as date, 
+        'matomo' as source,
+        
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ as date,
+        "left"(matomo_actions.eventname::text, 2) as country_code, 
+        lower(sitename) as campaign_name, 
+        campaignname as ga_campaign_name,
+        CASE 
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical, 
+        "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
+        count(matomo_actions.id) as outclicks,
+        count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
+        round(avg(eventvalue), 2) AS avg_list_position,
+        string_agg(DISTINCT eventvalue::character varying::text, ';'::text) AS pos_list,
+        NULL as signups, NULL as cpa_count, NULL as cpa_commissions, NULL as revshare_commissions, NULL as gtee_count,
+        NULL as gtee_commissions, NULL as avg_deposit_amount
+    from "deep-analysis-console"."console"."matomo_actions" matomo_actions
+    left join "deep-analysis-console"."console"."matomo_visits" matomo_visits 
+    on matomo_actions.matomo_visit_id=matomo_visits.id
+    where 
+        matomo_actions.type = 'event' 
+        AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
+        --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+        --and date(timestamp - interval '2 hours') >'2023-01-01'
+        and 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ >'2023-01-01'
+    --[[ and parse_matomo_timestamp(timestamp) in ( select date_parsed from calendar where  ) ]]
+    -- [[ and "left"(matomo_actions.eventname::text, 2) in ( select distinct geo from campaign_names_mapping WHERE  ) ]]
+    -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE )]]
+    -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE )]]
+    -- [[ and "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) in ( select distinct brand_name from records WHERE  ) ]]
+    group by source, campaign_name, campaignname, campaign_vertical, 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+, brand_name, country_code
+    /*affiliate records aggregated data from records table*/
+    union all
+    select 
+        'records' as source,
+        date, 
+        country_code, 
+        campaign_name, 
+	    ga_campaign_name, 
+        campaign_vertical, 
+        brand_name,
+        NULL as outclicks, 
+        NULL as unique_outclicks, 
+        NULL as avg_list_position, 
+        NULL as pos_list,
+        sum(registrations) as signups, 
+        sum(cpa_count) as cpa_count, 
+        sum(cpa_commissions) AS cpa_commissions,
+        coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
+        sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
+        avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
+    from stg_records 
+        -- right(brand_name,6)<>'sports'
+        -- and date_parsed > '2023-12-31'
+    --[[ and date_parsed in ( select date_parsed from calendar where  ) ]]
+    -- [[ and geo in (select distinct geo from campaign_names_mapping WHERE ) ]]
+    -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE ) ]]
+    -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE ) ]]
+    -- [[ and  ]]
+    group by source, date, country_code, campaign_name, ga_campaign_name, campaign_vertical, brand_name
+)
+
+select *,
+md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(source as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id
+from main
+  );
+  
+[0m15:39:28.753943 [debug] [Thread-1 (]: SQL status: SELECT 508856 in 15.0 seconds
+[0m15:39:28.761622 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:28.762383 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+alter table "deep-analysis-console"."danila"."outclick_by_brand_int" rename to "outclick_by_brand_int__dbt_backup"
+[0m15:39:28.809679 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:28.817179 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:28.817883 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+alter table "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_tmp" rename to "outclick_by_brand_int"
+[0m15:39:28.864983 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:28.873241 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: COMMIT
+[0m15:39:28.873749 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:28.874035 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: COMMIT
+[0m15:39:28.920536 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:28.926815 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m15:39:28.927705 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+drop table if exists "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_backup" cascade
+[0m15:39:29.007682 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m15:39:29.009383 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_by_brand_int (execute): 15:39:12.877960 => 15:39:29.009192
+[0m15:39:29.009988 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: Close
+[0m15:39:29.011115 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108df8290>]}
+[0m15:39:29.011913 [info ] [Thread-1 (]: 3 of 6 OK created sql table model danila.outclick_by_brand_int ................. [[32mSELECT 508856[0m in 16.16s]
+[0m15:39:29.012879 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.outclick_by_brand_int
+[0m15:39:29.013546 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.outclick_cost_int
+[0m15:39:29.014384 [info ] [Thread-1 (]: 4 of 6 START sql table model danila.outclick_cost_int .......................... [RUN]
+[0m15:39:29.015530 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.outclick_by_brand_int, now model.campaign_perfomance.outclick_cost_int)
+[0m15:39:29.016095 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.outclick_cost_int
+[0m15:39:29.028970 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:29.030113 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_cost_int (compile): 15:39:29.016448 => 15:39:29.029901
+[0m15:39:29.030480 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.outclick_cost_int
+[0m15:39:29.034320 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:29.035085 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:29.035385 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: BEGIN
+[0m15:39:29.035661 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:39:29.504289 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:29.505146 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:29.505752 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+
+  
+    
+
+  create  table "deep-analysis-console"."danila"."outclick_cost_int__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/campaign_level_data.sql
+
+with main as 
+(
+    select
+        'matomo' as source, --matomo
+        
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ as date, --matomo update
+        "left"(matomo_actions.eventname::text, 2) as country_code, 
+        lower(sitename) as campaign_name, 
+        campaignname as ga_campaign_name, 
+        CASE 
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical,
+        "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
+        count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
+        NULL as cost
+    from "deep-analysis-console"."console"."matomo_actions" matomo_actions
+    left join "deep-analysis-console"."console"."matomo_visits" matomo_visits
+    on matomo_actions.matomo_visit_id=matomo_visits.id
+    where matomo_actions.type = 'event' 
+        AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
+        --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+        AND 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+>'2023-01-01' --matomo
+    group by campaign_name, campaignname, campaign_vertical, 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+, brand_name, country_code
+    union all
+    select
+        'records_gap_campaigns' as source, --'records'
+        day as date, 
+        geo as country_code, 
+        console_campaign_name as campaign_name, 
+        lower(campaign) as ga_campaign_name, 
+        CASE 
+            when campaign_names_mapping.campaign_vertical='casino' then 'casino'
+            when campaign_names_mapping.campaign_vertical='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical,
+        NULL as brand_name, 
+        NULL as unique_outclicks, 
+        sum(cost) as cost
+    from "deep-analysis-console"."console"."records_gap_campaigns"  records_gap_campaigns
+    left join "deep-analysis-console"."console"."campaign_names_mapping" campaign_names_mapping on campaign_names_mapping.gap_campaign_name=records_gap_campaigns.campaign
+    where day >'2023-01-01'
+        -- campaign_names_mapping.campaign_vertical='casino'
+        -- and day >'2023-12-31' --matomo
+
+    group by day, country_code, campaign_name, ga_campaign_name, campaign_vertical
+)
+
+
+select *,
+md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(source as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id
+
+from main
+
+
+-- Checking for duplicates
+-- test as (
+--     select 
+--     md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id, 
+--     *
+-- from main
+-- )
+
+-- select * 
+-- from test
+-- left join (select id, count(*) from test group by id having count(*)>1) as duplicates on test.id=duplicates.id
+-- where duplicates.id is not null --and cost is not null and test.id='df85a909516d6442b4f696089262f04a'
+  );
+  
+[0m15:39:38.174727 [debug] [Thread-1 (]: SQL status: SELECT 145589 in 9.0 seconds
+[0m15:39:38.181039 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:38.181524 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+alter table "deep-analysis-console"."danila"."outclick_cost_int" rename to "outclick_cost_int__dbt_backup"
+[0m15:39:38.228230 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:38.233765 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:38.234636 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+alter table "deep-analysis-console"."danila"."outclick_cost_int__dbt_tmp" rename to "outclick_cost_int"
+[0m15:39:38.281465 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:38.283752 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: COMMIT
+[0m15:39:38.284201 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:38.284558 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: COMMIT
+[0m15:39:38.331392 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:38.335697 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m15:39:38.336219 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+drop table if exists "deep-analysis-console"."danila"."outclick_cost_int__dbt_backup" cascade
+[0m15:39:38.409325 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m15:39:38.412320 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_cost_int (execute): 15:39:29.030688 => 15:39:38.412081
+[0m15:39:38.412962 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: Close
+[0m15:39:38.414594 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108829450>]}
+[0m15:39:38.415606 [info ] [Thread-1 (]: 4 of 6 OK created sql table model danila.outclick_cost_int ..................... [[32mSELECT 145589[0m in 9.40s]
+[0m15:39:38.416584 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.outclick_cost_int
+[0m15:39:38.417247 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.stg_scraper__records
+[0m15:39:38.418041 [info ] [Thread-1 (]: 5 of 6 START sql view model danila.stg_scraper__records ........................ [RUN]
+[0m15:39:38.419251 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.outclick_cost_int, now model.campaign_perfomance.stg_scraper__records)
+[0m15:39:38.419840 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.stg_scraper__records
+[0m15:39:38.424823 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:38.425901 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.stg_scraper__records (compile): 15:39:38.420130 => 15:39:38.425682
+[0m15:39:38.426249 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.stg_scraper__records
+[0m15:39:38.431020 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:38.432017 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:38.432347 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: BEGIN
+[0m15:39:38.432646 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:39:38.931848 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:38.933236 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:38.934457 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+
+  create view "deep-analysis-console"."danila"."stg_scraper__records__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/scraper/stg_scraper__records.sql
+
+with source as (
+    select * from "deep-analysis-console"."console"."records"
+)
+
+, transformed as (
+    select
+        id
+        , created_at
+        , user_id
+        , deal_id
+        , date_parsed as date_cet
+        , click_id
+        , geo as country_code
+        , registrations as signed_up
+        , cpa_count as deposited_first_time
+        , gtee_count
+        , cpa_commissions as acquisition_commission
+        , deposits as acquisition_deposit
+        , total_commission
+        , gtee_commissions
+        , net_revenue
+        , revshare_commissions
+        , lower(adgroup_name) as ga_campaign_name
+        , case
+            when right(brand_name, 6) <> 'sports' then 'casino'
+            when right(brand_name, 6) = 'sports' then 'sports'
+            else 'other'
+        end as campaign_vertical
+        , case
+            when campaign_name::text = 'email' then brand_name || ' email'
+            when campaign_name::text = 'PA' then brand_name || ' PA'
+            else brand_name
+        end as brand_name
+
+        , case
+            when campaign_name = 'jpluckyslotsonline' then 'luckyslotsonline'
+            when campaign_name = 'ficashstormslots' then 'cashstormslots'
+            when campaign_name = 'goldenlion' then 'goldenliongames'
+            else campaign_name
+        end as campaign_name
+    from source
+    where
+        date_parsed > '2024-03-31'
+        --and cpa_count > 0.5
+        --and deal_id is null
+        --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
+    --and user_id='ae4eb2f5ad8ebf29'
+    order by user_id, deal_id, date_parsed
+)
+
+-- Add grain_id
+
+, added_grain as (
+    select
+        *
+        , md5(user_id || deal_id || date_cet) as grain_id
+    from transformed
+)
+
+
+-- Identify duplicates by assigning row numbers
+, ranked_records as (
+    select
+        *
+        , row_number() over (
+            partition by grain_id -- columns that define a duplicate
+            order by id desc -- criteria to determine which record to keep
+        ) as duplicate_count
+    from added_grain
+)
+
+-- Filter out duplicates, keeping only the first occurrence
+, deduplicated_records as (
+    select *
+    from
+        ranked_records
+    where
+        duplicate_count = 1
+)
+
+select * from deduplicated_records
+
+
+
+--main where user_id='51a4a42eaaeb12f7' and deal_id='2609' and date_cet='2024-05-16'
+
+
+-- select user_id, deal_id, date_cet, count(id) as duplicates
+-- from main
+-- group by user_id, deal_id, date_cet
+-- having count(id)>1.1
+-- select user_id, date_parsed, registrations, depositing_customers, cpa_count
+
+-- from records
+-- where user_id='931800d1c75e2834'
+-- order by date_parsed
+
+
+-- with main as (
+--     select user_id, created_at, deal_id, date, date_parsed
+--         , case
+--             when date ~ '^\d{2}-\d{2}-\d{4}$' then to_date(date, 'DD-MM-YYYY')
+--             when date ~ '^\d{4}-\d{2}-\d{2}$' then to_date(date, 'YYYY-MM-DD')
+--             when date ~ '^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$' then to_timestamp(date, 'YYYY-MM-DD HH24:MI:SS')::date
+--             when date ~ '^\d{1,2}/\d{1,2}/\d{2} \d{1,2}:\d{2}:\d{2} (AM|PM)$' then to_timestamp(date, 'MM/DD/YY HH12:MI:SS AM')::date
+--             when date ~ '^\d{1,2}/\d{1,2}/\d{4} \d{1,2}:\d{2}:\d{2} (AM|PM)$' then to_timestamp(date, 'MM/DD/YYYY HH12:MI:SS AM')::date
+--             when date ~ '^\d{4}\.\d{2}\.\d{2}$' then to_date(date, 'YYYY.MM.DD')
+--             when date ~ '^\d{5}-\d{2}-\d{2}$' then to_date(substring(date from 1 for 4) || substring(date from 6), 'YYYY-MM-DD')
+--             else null
+--         end as transformed_date
+--     from records
+-- ),
+
+-- comparison as 
+-- (select
+--     *,
+--     (case
+--         when date_parsed = transformed_date then 1
+--         else 0
+--     end) as comparison
+-- from main)
+
+-- select * from comparison where comparison = 0 and date_parsed>'2024-04-30'
+-- select sum(comparison), count(comparison)
+-- from comparison
+-- where date_parsed>'2024-01-31'
+  );
+[0m15:39:39.002536 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:39:39.010294 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:39.010858 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+alter table "deep-analysis-console"."danila"."stg_scraper__records" rename to "stg_scraper__records__dbt_backup"
+[0m15:39:39.071754 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:39.078064 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:39.078782 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+alter table "deep-analysis-console"."danila"."stg_scraper__records__dbt_tmp" rename to "stg_scraper__records"
+[0m15:39:39.139983 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:39:39.144439 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: COMMIT
+[0m15:39:39.145246 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:39.145775 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: COMMIT
+[0m15:39:39.207310 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:39.213850 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m15:39:39.214492 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+drop view if exists "deep-analysis-console"."danila"."stg_scraper__records__dbt_backup" cascade
+[0m15:39:39.277344 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:39:39.280893 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.stg_scraper__records (execute): 15:39:38.426617 => 15:39:39.280624
+[0m15:39:39.281480 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: Close
+[0m15:39:39.282692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eebc10>]}
+[0m15:39:39.283476 [info ] [Thread-1 (]: 5 of 6 OK created sql view model danila.stg_scraper__records ................... [[32mCREATE VIEW[0m in 0.86s]
+[0m15:39:39.284206 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.stg_scraper__records
+[0m15:39:39.285363 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.first_deposits_fct
+[0m15:39:39.285899 [info ] [Thread-1 (]: 6 of 6 START sql view model danila.first_deposits_fct .......................... [RUN]
+[0m15:39:39.286779 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.stg_scraper__records, now model.campaign_perfomance.first_deposits_fct)
+[0m15:39:39.287166 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.first_deposits_fct
+[0m15:39:39.291047 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.first_deposits_fct"
+[0m15:39:39.291952 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.first_deposits_fct (compile): 15:39:39.287421 => 15:39:39.291723
+[0m15:39:39.292329 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.first_deposits_fct
+[0m15:39:39.296150 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.first_deposits_fct"
+[0m15:39:39.296795 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m15:39:39.297089 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: BEGIN
+[0m15:39:39.297371 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:39:39.723067 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:39.724090 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m15:39:39.724986 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.first_deposits_fct"} */
+
+  create view "deep-analysis-console"."danila"."first_deposits_fct__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/scraper/stg_scraper__records.sql
+
+with source as (
+    select * from "deep-analysis-console"."danila"."stg_scraper__records"
+)
+
+, transformed as (
+    select
+        id--grain_id
+        , created_at
+        , user_id
+        , deal_id
+        , date_parsed as date_cet
+        , click_id
+        , geo as country_code
+        , registrations as signed_up
+        , cpa_count as deposited_first_time
+        , gtee_count
+        , cpa_commissions as acquisition_commission
+        , deposits as acquisition_deposit
+        , total_commission
+        , gtee_commissions
+        , net_revenue
+        , revshare_commissions
+        , ga_campaign_name
+        , campaign_vertical
+        , brand_name
+        , campaign_name
+    from source
+    where
+        date_parsed > '2024-03-31'
+        and deposited_first_time > 0.5
+        --and deal_id is null
+        --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
+    --and user_id='ae4eb2f5ad8ebf29'
+)
+
+
+select * from transformed
+  );
+[0m15:39:39.779837 [debug] [Thread-1 (]: Postgres adapter: Postgres error: column "date_parsed" does not exist
+LINE 19:         , date_parsed as date_cet
+                   ^
+
+[0m15:39:39.780843 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: ROLLBACK
+[0m15:39:39.834392 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.first_deposits_fct (execute): 15:39:39.292563 => 15:39:39.833966
+[0m15:39:39.835216 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: Close
+[0m15:39:39.842652 [debug] [Thread-1 (]: Database Error in model first_deposits_fct (models/marts/first_deposits_fct.sql)
+  column "date_parsed" does not exist
+  LINE 19:         , date_parsed as date_cet
+                     ^
+  compiled Code at target/run/campaign_perfomance/models/marts/first_deposits_fct.sql
+[0m15:39:39.843611 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dab7199d-e13a-46c6-ac56-216f389a8475', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6fc90>]}
+[0m15:39:39.844415 [error] [Thread-1 (]: 6 of 6 ERROR creating sql view model danila.first_deposits_fct ................. [[31mERROR[0m in 0.56s]
+[0m15:39:39.845188 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.first_deposits_fct
+[0m15:39:39.847308 [debug] [MainThread]: Using postgres connection "master"
+[0m15:39:39.847748 [debug] [MainThread]: On master: BEGIN
+[0m15:39:39.848101 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:39:40.276988 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:39:40.278544 [debug] [MainThread]: On master: COMMIT
+[0m15:39:40.279285 [debug] [MainThread]: Using postgres connection "master"
+[0m15:39:40.279631 [debug] [MainThread]: On master: COMMIT
+[0m15:39:40.332075 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:39:40.332718 [debug] [MainThread]: On master: Close
+[0m15:39:40.333844 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:39:40.334148 [debug] [MainThread]: Connection 'model.campaign_perfomance.first_deposits_fct' was properly closed.
+[0m15:39:40.335052 [info ] [MainThread]: 
+[0m15:39:40.335781 [info ] [MainThread]: Finished running 4 view models, 2 table models in 0 hours 0 minutes and 30.59 seconds (30.59s).
+[0m15:39:40.337621 [debug] [MainThread]: Command end result
+[0m15:39:40.348169 [info ] [MainThread]: 
+[0m15:39:40.348781 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m15:39:40.349271 [info ] [MainThread]: 
+[0m15:39:40.349996 [error] [MainThread]: [33mDatabase Error in model first_deposits_fct (models/marts/first_deposits_fct.sql)[0m
+[0m15:39:40.350407 [error] [MainThread]:   column "date_parsed" does not exist
+[0m15:39:40.350781 [error] [MainThread]:   LINE 19:         , date_parsed as date_cet
+[0m15:39:40.351116 [error] [MainThread]:                      ^
+[0m15:39:40.351435 [error] [MainThread]:   compiled Code at target/run/campaign_perfomance/models/marts/first_deposits_fct.sql
+[0m15:39:40.351785 [info ] [MainThread]: 
+[0m15:39:40.352187 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+[0m15:39:40.352864 [debug] [MainThread]: Command `dbt run` failed at 15:39:40.352745 after 30.70 seconds
+[0m15:39:40.353258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047ba090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047ba2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108828350>]}
+[0m15:39:40.353639 [debug] [MainThread]: Flushing usage events
+[0m22:54:18.329825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10599bc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10599a010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10548d950>]}
+
+
+============================== 22:54:18.331418 | f4863de9-f574-4713-9d04-c249f1eb8576 ==============================
+[0m22:54:18.331418 [info ] [MainThread]: Running with dbt=1.5.4
+[0m22:54:18.331717 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'introspect': 'True', 'warn_error': 'None', 'version_check': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'debug': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'indirect_selection': 'eager', 'target_path': 'None', 'profiles_dir': '/Users/danila/.dbt', 'use_experimental_parser': 'False', 'log_path': '/Users/danila/github/dbt/logs', 'write_json': 'True', 'printer_width': '80', 'partial_parse': 'True', 'quiet': 'False', 'static_parser': 'True'}
+[0m22:54:18.362065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059cd690>]}
+[0m22:54:18.368556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059cd690>]}
+[0m22:54:18.369040 [info ] [MainThread]: Registered adapter: postgres=1.5.4
+[0m22:54:18.382847 [debug] [MainThread]: checksum: 5d6b65bf0937b31c1cb174f5650843d5ea9953bdf3de7df3d9ed5979670d6d21, vars: {}, profile: , target: , version: 1.5.4
+[0m22:54:18.420344 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:54:18.420529 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:54:18.420810 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.users
+- models.brand_performance
+- models.staging/scraper
+[0m22:54:18.423241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e70650>]}
+[0m22:54:18.427581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e9e7d0>]}
+[0m22:54:18.427801 [info ] [MainThread]: Found 7 models, 5 tests, 0 snapshots, 0 analyses, 444 macros, 0 operations, 0 seed files, 14 sources, 0 exposures, 0 metrics, 0 groups
+[0m22:54:18.427966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028ea750>]}
+[0m22:54:18.428809 [info ] [MainThread]: 
+[0m22:54:18.429176 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:54:18.429641 [debug] [ThreadPool]: Acquiring new postgres connection 'list_deep-analysis-console'
+[0m22:54:18.433614 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console"
+[0m22:54:18.433774 [debug] [ThreadPool]: On list_deep-analysis-console: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "list_deep-analysis-console"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m22:54:18.433890 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:54:18.948107 [debug] [ThreadPool]: SQL status: SELECT 8 in 1.0 seconds
+[0m22:54:18.952601 [debug] [ThreadPool]: On list_deep-analysis-console: Close
+[0m22:54:18.956796 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_deep-analysis-console, now list_deep-analysis-console_danila)
+[0m22:54:18.964854 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console_danila"
+[0m22:54:18.965627 [debug] [ThreadPool]: On list_deep-analysis-console_danila: BEGIN
+[0m22:54:18.966002 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:54:19.410471 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:19.412340 [debug] [ThreadPool]: Using postgres connection "list_deep-analysis-console_danila"
+[0m22:54:19.413049 [debug] [ThreadPool]: On list_deep-analysis-console_danila: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "list_deep-analysis-console_danila"} */
+select
+      'deep-analysis-console' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'danila'
+    union all
+    select
+      'deep-analysis-console' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'danila'
+  
+[0m22:54:19.463332 [debug] [ThreadPool]: SQL status: SELECT 22 in 0.0 seconds
+[0m22:54:19.467935 [debug] [ThreadPool]: On list_deep-analysis-console_danila: ROLLBACK
+[0m22:54:19.515069 [debug] [ThreadPool]: On list_deep-analysis-console_danila: Close
+[0m22:54:19.528745 [debug] [MainThread]: Using postgres connection "master"
+[0m22:54:19.529160 [debug] [MainThread]: On master: BEGIN
+[0m22:54:19.529498 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:54:19.980934 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:19.981456 [debug] [MainThread]: Using postgres connection "master"
+[0m22:54:19.981753 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:54:20.043743 [debug] [MainThread]: SQL status: SELECT 49 in 0.0 seconds
+[0m22:54:20.045171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e9e7d0>]}
+[0m22:54:20.045503 [debug] [MainThread]: On master: ROLLBACK
+[0m22:54:20.101993 [debug] [MainThread]: Using postgres connection "master"
+[0m22:54:20.102238 [debug] [MainThread]: On master: BEGIN
+[0m22:54:20.212207 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:20.213644 [debug] [MainThread]: On master: COMMIT
+[0m22:54:20.214374 [debug] [MainThread]: Using postgres connection "master"
+[0m22:54:20.214863 [debug] [MainThread]: On master: COMMIT
+[0m22:54:20.269991 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:20.270897 [debug] [MainThread]: On master: Close
+[0m22:54:20.273263 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:54:20.273992 [info ] [MainThread]: 
+[0m22:54:20.283937 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.clicks_to_clients_fct
+[0m22:54:20.284724 [info ] [Thread-1 (]: 1 of 6 START sql view model danila.clicks_to_clients_fct ....................... [RUN]
+[0m22:54:20.285678 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_deep-analysis-console_danila, now model.campaign_perfomance.clicks_to_clients_fct)
+[0m22:54:20.286144 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.clicks_to_clients_fct
+[0m22:54:20.293381 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.294625 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.clicks_to_clients_fct (compile): 22:54:20.286447 => 22:54:20.294391
+[0m22:54:20.294968 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.clicks_to_clients_fct
+[0m22:54:20.319514 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.320067 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.320261 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: BEGIN
+[0m22:54:20.320440 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:54:20.706893 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:20.708533 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.709274 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+
+  create view "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_tmp"
+    
+    
+  as (
+    select
+    timestamp as timestamp_cet
+    , deal_id
+    , user_id
+    , brand_name as brand_id
+    , geo as country_code
+    -- , campaign_group_id
+    , event_type as event_id
+    -- , campaign_vertical_id
+    -- , google_ads_campaign_id
+    -- , traffic_source_id
+    , adclickid as ad_click_id
+    -- , moneypage_id
+    -- , site_id
+    -- , affiliate_account_id
+    -- , offer_id
+from postbacks_outgoing
+  );
+[0m22:54:20.759948 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m22:54:20.775116 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.775821 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+alter table "deep-analysis-console"."danila"."clicks_to_clients_fct" rename to "clicks_to_clients_fct__dbt_backup"
+[0m22:54:20.824313 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:20.830624 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.831334 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+alter table "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_tmp" rename to "clicks_to_clients_fct"
+[0m22:54:20.878608 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:20.899639 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: COMMIT
+[0m22:54:20.900069 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.900380 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: COMMIT
+[0m22:54:20.946779 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:20.955074 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.clicks_to_clients_fct"
+[0m22:54:20.955502 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.clicks_to_clients_fct"} */
+drop view if exists "deep-analysis-console"."danila"."clicks_to_clients_fct__dbt_backup" cascade
+[0m22:54:21.003378 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m22:54:21.006515 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.clicks_to_clients_fct (execute): 22:54:20.295147 => 22:54:21.006141
+[0m22:54:21.007264 [debug] [Thread-1 (]: On model.campaign_perfomance.clicks_to_clients_fct: Close
+[0m22:54:21.009186 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e88110>]}
+[0m22:54:21.010375 [info ] [Thread-1 (]: 1 of 6 OK created sql view model danila.clicks_to_clients_fct .................. [[32mCREATE VIEW[0m in 0.72s]
+[0m22:54:21.011557 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.clicks_to_clients_fct
+[0m22:54:21.012204 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.deals_dimension
+[0m22:54:21.012986 [info ] [Thread-1 (]: 2 of 6 START sql view model danila.deals_dimension ............................. [RUN]
+[0m22:54:21.013939 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.clicks_to_clients_fct, now model.campaign_perfomance.deals_dimension)
+[0m22:54:21.014399 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.deals_dimension
+[0m22:54:21.017075 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.018459 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.deals_dimension (compile): 22:54:21.014703 => 22:54:21.018267
+[0m22:54:21.018876 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.deals_dimension
+[0m22:54:21.023427 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.024412 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.024734 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: BEGIN
+[0m22:54:21.025032 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:54:21.502473 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:21.504395 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.505753 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+
+  create view "deep-analysis-console"."danila"."deals_dimension__dbt_tmp"
+    
+    
+  as (
+    with main as (
+    select id
+        , brand_name
+        , geo as country_code
+        , deal_start_date as start_date
+        , deal_end_date as end_date
+        , deal_cpa as first_time_deposit_commission
+        , deal_gtee as guaranteed_commission
+        , deal_revshare as revenue_share_commission
+        , campaign_name as campaign_group
+        , gap_campaign_name as google_ads_campaign_id
+        -- , traffic_types as betting_type
+        -- , traffic_sources
+    from deals
+)
+
+select * from main
+where id=2085
+-- select betting_type, traffic_sources, count(id)
+-- from main
+-- group by betting_type, traffic_sources
+  );
+[0m22:54:21.568008 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m22:54:21.575590 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.576113 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+alter table "deep-analysis-console"."danila"."deals_dimension" rename to "deals_dimension__dbt_backup"
+[0m22:54:21.634964 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:21.640907 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.641542 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+alter table "deep-analysis-console"."danila"."deals_dimension__dbt_tmp" rename to "deals_dimension"
+[0m22:54:21.699883 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:21.703757 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: COMMIT
+[0m22:54:21.704444 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.705010 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: COMMIT
+[0m22:54:21.763467 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:21.767815 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.deals_dimension"
+[0m22:54:21.768321 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.deals_dimension"} */
+drop view if exists "deep-analysis-console"."danila"."deals_dimension__dbt_backup" cascade
+[0m22:54:21.828032 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m22:54:21.832075 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.deals_dimension (execute): 22:54:21.019137 => 22:54:21.831735
+[0m22:54:21.832744 [debug] [Thread-1 (]: On model.campaign_perfomance.deals_dimension: Close
+[0m22:54:21.834363 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f96390>]}
+[0m22:54:21.835256 [info ] [Thread-1 (]: 2 of 6 OK created sql view model danila.deals_dimension ........................ [[32mCREATE VIEW[0m in 0.82s]
+[0m22:54:21.836105 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.deals_dimension
+[0m22:54:21.836640 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.outclick_by_brand_int
+[0m22:54:21.837251 [info ] [Thread-1 (]: 3 of 6 START sql table model danila.outclick_by_brand_int ...................... [RUN]
+[0m22:54:21.838053 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.deals_dimension, now model.campaign_perfomance.outclick_by_brand_int)
+[0m22:54:21.838413 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.outclick_by_brand_int
+[0m22:54:21.858125 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:21.860715 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_by_brand_int (compile): 22:54:21.838657 => 22:54:21.860534
+[0m22:54:21.860992 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.outclick_by_brand_int
+[0m22:54:21.876289 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:21.877075 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:21.877285 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: BEGIN
+[0m22:54:21.877464 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:54:22.355038 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:22.356965 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:22.358596 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+
+  
+    
+
+  create  table "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/campaign_level_data.sql
+
+with stg_records as (
+    select 
+    --'records' as source,
+    date_parsed as date, 
+    geo as country_code, 
+    CASE  
+        WHEN campaign_name::text = 'jpluckyslotsonline'::text THEN 'luckyslotsonline'::character varying
+        WHEN campaign_name::text = 'ficashstormslots'::text THEN 'cashstormslots'::character varying
+        WHEN campaign_name::text = 'goldenlion'::text THEN 'goldenliongames'::character varying
+        ELSE campaign_name
+    END as campaign_name, 
+    lower(adgroup_name) as ga_campaign_name, 
+    CASE 
+        when right(brand_name,6)<>'sports' then 'casino'
+        when right(brand_name,6)='sports' then 'sports'
+        else 'other'
+    END as campaign_vertical,
+    CASE
+        WHEN campaign_name::text = 'email' THEN brand_name || ' email'
+        WHEN campaign_name::text = 'PA' THEN brand_name || ' PA'
+        ELSE brand_name
+    END as brand_name, 
+    NULL as outclicks, 
+    NULL as unique_outclicks, 
+    NULL as avg_list_position, 
+    NULL as pos_list,
+    registrations, --sum(registrations) as signups, 
+    cpa_count, --sum(cpa_count) as cpa_count, 
+    cpa_commissions, --sum(cpa_commissions) AS cpa_commissions,
+    total_commission, -- coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
+    gtee_count,
+    gtee_commissions,
+    deposits --sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
+    --avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
+from "deep-analysis-console"."console"."records" records
+where date_parsed > '2023-01-01'
+),
+
+ main as (
+    select 
+        --date(timestamp - interval '2 hours') as date, 
+        'matomo' as source,
+        
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ as date,
+        "left"(matomo_actions.eventname::text, 2) as country_code, 
+        lower(sitename) as campaign_name, 
+        campaignname as ga_campaign_name,
+        CASE 
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical, 
+        "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
+        count(matomo_actions.id) as outclicks,
+        count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
+        round(avg(eventvalue), 2) AS avg_list_position,
+        string_agg(DISTINCT eventvalue::character varying::text, ';'::text) AS pos_list,
+        NULL as signups, NULL as cpa_count, NULL as cpa_commissions, NULL as revshare_commissions, NULL as gtee_count,
+        NULL as gtee_commissions, NULL as avg_deposit_amount
+    from "deep-analysis-console"."console"."matomo_actions" matomo_actions
+    left join "deep-analysis-console"."console"."matomo_visits" matomo_visits 
+    on matomo_actions.matomo_visit_id=matomo_visits.id
+    where 
+        matomo_actions.type = 'event' 
+        AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
+        --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+        --and date(timestamp - interval '2 hours') >'2023-01-01'
+        and 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ >'2023-01-01'
+    --[[ and parse_matomo_timestamp(timestamp) in ( select date_parsed from calendar where  ) ]]
+    -- [[ and "left"(matomo_actions.eventname::text, 2) in ( select distinct geo from campaign_names_mapping WHERE  ) ]]
+    -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE )]]
+    -- [[ and lower(sitename) in ( select distinct console_campaign_name from campaign_names_mapping WHERE )]]
+    -- [[ and "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) in ( select distinct brand_name from records WHERE  ) ]]
+    group by source, campaign_name, campaignname, campaign_vertical, 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+, brand_name, country_code
+    /*affiliate records aggregated data from records table*/
+    union all
+    select 
+        'records' as source,
+        date, 
+        country_code, 
+        campaign_name, 
+	    ga_campaign_name, 
+        campaign_vertical, 
+        brand_name,
+        NULL as outclicks, 
+        NULL as unique_outclicks, 
+        NULL as avg_list_position, 
+        NULL as pos_list,
+        sum(registrations) as signups, 
+        sum(cpa_count) as cpa_count, 
+        sum(cpa_commissions) AS cpa_commissions,
+        coalesce(sum(total_commission-cpa_commissions) filter(where total_commission-cpa_commissions<>0 and gtee_count=0),0) AS revshare_commissions,
+        sum(gtee_count) as gtee_count, sum(gtee_commissions) as gtee_commissions,
+        avg(deposits) FILTER(where cpa_count>0) AS avg_deposit_amount
+    from stg_records 
+        -- right(brand_name,6)<>'sports'
+        -- and date_parsed > '2023-12-31'
+    --[[ and date_parsed in ( select date_parsed from calendar where  ) ]]
+    -- [[ and geo in (select distinct geo from campaign_names_mapping WHERE ) ]]
+    -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE ) ]]
+    -- [[ and campaign_name in ( select distinct console_campaign_name from campaign_names_mapping WHERE ) ]]
+    -- [[ and  ]]
+    group by source, date, country_code, campaign_name, ga_campaign_name, campaign_vertical, brand_name
+)
+
+select *,
+md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(source as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id
+from main
+  );
+  
+[0m22:54:37.981167 [debug] [Thread-1 (]: SQL status: SELECT 509382 in 16.0 seconds
+[0m22:54:37.988516 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:37.989222 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+alter table "deep-analysis-console"."danila"."outclick_by_brand_int" rename to "outclick_by_brand_int__dbt_backup"
+[0m22:54:38.048217 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:38.054425 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:38.055071 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+alter table "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_tmp" rename to "outclick_by_brand_int"
+[0m22:54:38.113259 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:38.123887 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: COMMIT
+[0m22:54:38.124408 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:38.124838 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: COMMIT
+[0m22:54:38.182831 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:38.188390 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_by_brand_int"
+[0m22:54:38.189069 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_by_brand_int"} */
+drop table if exists "deep-analysis-console"."danila"."outclick_by_brand_int__dbt_backup" cascade
+[0m22:54:38.280401 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:54:38.283129 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_by_brand_int (execute): 22:54:21.861150 => 22:54:38.282785
+[0m22:54:38.283973 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_by_brand_int: Close
+[0m22:54:38.285473 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106919790>]}
+[0m22:54:38.286281 [info ] [Thread-1 (]: 3 of 6 OK created sql table model danila.outclick_by_brand_int ................. [[32mSELECT 509382[0m in 16.45s]
+[0m22:54:38.287065 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.outclick_by_brand_int
+[0m22:54:38.287581 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.outclick_cost_int
+[0m22:54:38.288205 [info ] [Thread-1 (]: 4 of 6 START sql table model danila.outclick_cost_int .......................... [RUN]
+[0m22:54:38.289090 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.outclick_by_brand_int, now model.campaign_perfomance.outclick_cost_int)
+[0m22:54:38.289500 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.outclick_cost_int
+[0m22:54:38.299958 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:38.302417 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_cost_int (compile): 22:54:38.290044 => 22:54:38.302232
+[0m22:54:38.302710 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.outclick_cost_int
+[0m22:54:38.305885 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:38.306426 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:38.306681 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: BEGIN
+[0m22:54:38.306923 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:54:38.785528 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:38.787059 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:38.788404 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+
+  
+    
+
+  create  table "deep-analysis-console"."danila"."outclick_cost_int__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/campaign_level_data.sql
+
+with main as 
+(
+    select
+        'matomo' as source, --matomo
+        
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+ as date, --matomo update
+        "left"(matomo_actions.eventname::text, 2) as country_code, 
+        lower(sitename) as campaign_name, 
+        campaignname as ga_campaign_name, 
+        CASE 
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports' then 'casino'
+            when right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical,
+        "right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3) as brand_name,
+        count(DISTINCT matomo_visits.visitorid) AS unique_outclicks,
+        NULL as cost
+    from "deep-analysis-console"."console"."matomo_actions" matomo_actions
+    left join "deep-analysis-console"."console"."matomo_visits" matomo_visits
+    on matomo_actions.matomo_visit_id=matomo_visits.id
+    where matomo_actions.type = 'event' 
+        AND matomo_actions.subtitle = 'Category: "OutClicks, Action: "Click on casino banner"'
+        --and right("right"(matomo_actions.eventname::text, length(matomo_actions.eventname::text) - 3),6)<>'sports'
+        AND 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+>'2023-01-01' --matomo
+    group by campaign_name, campaignname, campaign_vertical, 
+    CASE
+        WHEN DATE(timestamp - INTERVAL '2 hour') > DATE '2023-10-28' THEN DATE(timestamp - INTERVAL '2 hour')
+        ELSE DATE(timestamp - INTERVAL '3 hour')
+    END
+, brand_name, country_code
+    union all
+    select
+        'records_gap_campaigns' as source, --'records'
+        day as date, 
+        geo as country_code, 
+        console_campaign_name as campaign_name, 
+        lower(campaign) as ga_campaign_name, 
+        CASE 
+            when campaign_names_mapping.campaign_vertical='casino' then 'casino'
+            when campaign_names_mapping.campaign_vertical='sports' then 'sports'
+            else 'other'
+        END as campaign_vertical,
+        NULL as brand_name, 
+        NULL as unique_outclicks, 
+        sum(cost) as cost
+    from "deep-analysis-console"."console"."records_gap_campaigns"  records_gap_campaigns
+    left join "deep-analysis-console"."console"."campaign_names_mapping" campaign_names_mapping on campaign_names_mapping.gap_campaign_name=records_gap_campaigns.campaign
+    where day >'2023-01-01'
+        -- campaign_names_mapping.campaign_vertical='casino'
+        -- and day >'2023-12-31' --matomo
+
+    group by day, country_code, campaign_name, ga_campaign_name, campaign_vertical
+)
+
+
+select *,
+md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(source as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id
+
+from main
+
+
+-- Checking for duplicates
+-- test as (
+--     select 
+--     md5(cast(coalesce(cast(campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(ga_campaign_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(campaign_vertical as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(brand_name as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as id, 
+--     *
+-- from main
+-- )
+
+-- select * 
+-- from test
+-- left join (select id, count(*) from test group by id having count(*)>1) as duplicates on test.id=duplicates.id
+-- where duplicates.id is not null --and cost is not null and test.id='df85a909516d6442b4f696089262f04a'
+  );
+  
+[0m22:54:47.913602 [debug] [Thread-1 (]: SQL status: SELECT 145629 in 9.0 seconds
+[0m22:54:47.921518 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:47.922293 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+alter table "deep-analysis-console"."danila"."outclick_cost_int" rename to "outclick_cost_int__dbt_backup"
+[0m22:54:47.977095 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:47.983171 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:47.983812 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+alter table "deep-analysis-console"."danila"."outclick_cost_int__dbt_tmp" rename to "outclick_cost_int"
+[0m22:54:48.038739 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:48.043090 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: COMMIT
+[0m22:54:48.043729 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:48.044285 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: COMMIT
+[0m22:54:48.100981 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:48.105323 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.outclick_cost_int"
+[0m22:54:48.105840 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.outclick_cost_int"} */
+drop table if exists "deep-analysis-console"."danila"."outclick_cost_int__dbt_backup" cascade
+[0m22:54:48.184346 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m22:54:48.186449 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.outclick_cost_int (execute): 22:54:38.302892 => 22:54:48.186168
+[0m22:54:48.186916 [debug] [Thread-1 (]: On model.campaign_perfomance.outclick_cost_int: Close
+[0m22:54:48.188325 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059a7650>]}
+[0m22:54:48.189302 [info ] [Thread-1 (]: 4 of 6 OK created sql table model danila.outclick_cost_int ..................... [[32mSELECT 145629[0m in 9.90s]
+[0m22:54:48.190314 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.outclick_cost_int
+[0m22:54:48.190982 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.stg_scraper__records
+[0m22:54:48.191848 [info ] [Thread-1 (]: 5 of 6 START sql view model danila.stg_scraper__records ........................ [RUN]
+[0m22:54:48.192926 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.outclick_cost_int, now model.campaign_perfomance.stg_scraper__records)
+[0m22:54:48.193394 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.stg_scraper__records
+[0m22:54:48.198583 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:48.201384 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.stg_scraper__records (compile): 22:54:48.193723 => 22:54:48.201164
+[0m22:54:48.202222 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.stg_scraper__records
+[0m22:54:48.207187 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:48.208310 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:48.208585 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: BEGIN
+[0m22:54:48.208837 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:54:48.976396 [debug] [Thread-1 (]: SQL status: BEGIN in 1.0 seconds
+[0m22:54:48.978260 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:48.979710 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+
+  create view "deep-analysis-console"."danila"."stg_scraper__records__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/scraper/stg_scraper__records.sql
+
+with source as (
+    select * from "deep-analysis-console"."console"."records"
+)
+
+, transformed as (
+    select
+        id
+        , created_at
+        , user_id
+        , deal_id
+        , date_parsed as date_cet
+        , click_id
+        , geo as country_code
+        , registrations as signed_up
+        , cpa_count as deposited_first_time
+        , gtee_count
+        , cpa_commissions as acquisition_commission
+        , deposits as acquisition_deposit
+        , total_commission
+        , gtee_commissions
+        , net_revenue
+        , revshare_commissions
+        , lower(adgroup_name) as ga_campaign_name
+        , case
+            when right(brand_name, 6) <> 'sports' then 'casino'
+            when right(brand_name, 6) = 'sports' then 'sports'
+            else 'other'
+        end as campaign_vertical
+        , case
+            when campaign_name::text = 'email' then brand_name || ' email'
+            when campaign_name::text = 'PA' then brand_name || ' PA'
+            else brand_name
+        end as brand_name
+
+        , case
+            when campaign_name = 'jpluckyslotsonline' then 'luckyslotsonline'
+            when campaign_name = 'ficashstormslots' then 'cashstormslots'
+            when campaign_name = 'goldenlion' then 'goldenliongames'
+            else campaign_name
+        end as campaign_name
+    from source
+    where
+        date_parsed > '2024-03-31'
+        --and cpa_count > 0.5
+        --and deal_id is null
+        --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
+    --and user_id='ae4eb2f5ad8ebf29'
+    order by user_id, deal_id, date_parsed
+)
+
+-- Add grain_id
+
+, added_grain as (
+    select
+        *
+        , md5(user_id || deal_id || date_cet) as grain_id
+    from transformed
+)
+
+
+-- Identify duplicates by assigning row numbers
+, ranked_records as (
+    select
+        *
+        , row_number() over (
+            partition by grain_id -- columns that define a duplicate
+            order by id desc -- criteria to determine which record to keep
+        ) as duplicate_count
+    from added_grain
+)
+
+-- Filter out duplicates, keeping only the first occurrence
+, deduplicated_records as (
+    select *
+    from
+        ranked_records
+    where
+        duplicate_count = 1
+)
+
+select * from deduplicated_records
+
+
+
+--main where user_id='51a4a42eaaeb12f7' and deal_id='2609' and date_cet='2024-05-16'
+
+
+-- select user_id, deal_id, date_cet, count(id) as duplicates
+-- from main
+-- group by user_id, deal_id, date_cet
+-- having count(id)>1.1
+-- select user_id, date_parsed, registrations, depositing_customers, cpa_count
+
+-- from records
+-- where user_id='931800d1c75e2834'
+-- order by date_parsed
+
+
+-- with main as (
+--     select user_id, created_at, deal_id, date, date_parsed
+--         , case
+--             when date ~ '^\d{2}-\d{2}-\d{4}$' then to_date(date, 'DD-MM-YYYY')
+--             when date ~ '^\d{4}-\d{2}-\d{2}$' then to_date(date, 'YYYY-MM-DD')
+--             when date ~ '^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$' then to_timestamp(date, 'YYYY-MM-DD HH24:MI:SS')::date
+--             when date ~ '^\d{1,2}/\d{1,2}/\d{2} \d{1,2}:\d{2}:\d{2} (AM|PM)$' then to_timestamp(date, 'MM/DD/YY HH12:MI:SS AM')::date
+--             when date ~ '^\d{1,2}/\d{1,2}/\d{4} \d{1,2}:\d{2}:\d{2} (AM|PM)$' then to_timestamp(date, 'MM/DD/YYYY HH12:MI:SS AM')::date
+--             when date ~ '^\d{4}\.\d{2}\.\d{2}$' then to_date(date, 'YYYY.MM.DD')
+--             when date ~ '^\d{5}-\d{2}-\d{2}$' then to_date(substring(date from 1 for 4) || substring(date from 6), 'YYYY-MM-DD')
+--             else null
+--         end as transformed_date
+--     from records
+-- ),
+
+-- comparison as 
+-- (select
+--     *,
+--     (case
+--         when date_parsed = transformed_date then 1
+--         else 0
+--     end) as comparison
+-- from main)
+
+-- select * from comparison where comparison = 0 and date_parsed>'2024-04-30'
+-- select sum(comparison), count(comparison)
+-- from comparison
+-- where date_parsed>'2024-01-31'
+  );
+[0m22:54:49.043303 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m22:54:49.054744 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:49.055290 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+alter table "deep-analysis-console"."danila"."stg_scraper__records" rename to "stg_scraper__records__dbt_backup"
+[0m22:54:49.111170 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:49.117636 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:49.118272 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+alter table "deep-analysis-console"."danila"."stg_scraper__records__dbt_tmp" rename to "stg_scraper__records"
+[0m22:54:49.173926 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:49.178250 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: COMMIT
+[0m22:54:49.178850 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:49.179424 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: COMMIT
+[0m22:54:49.234607 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:49.239601 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.stg_scraper__records"
+[0m22:54:49.240046 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.stg_scraper__records"} */
+drop view if exists "deep-analysis-console"."danila"."stg_scraper__records__dbt_backup" cascade
+[0m22:54:49.297784 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m22:54:49.301263 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.stg_scraper__records (execute): 22:54:48.202608 => 22:54:49.300936
+[0m22:54:49.302206 [debug] [Thread-1 (]: On model.campaign_perfomance.stg_scraper__records: Close
+[0m22:54:49.304137 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106924310>]}
+[0m22:54:49.305228 [info ] [Thread-1 (]: 5 of 6 OK created sql view model danila.stg_scraper__records ................... [[32mCREATE VIEW[0m in 1.11s]
+[0m22:54:49.306372 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.stg_scraper__records
+[0m22:54:49.307874 [debug] [Thread-1 (]: Began running node model.campaign_perfomance.first_deposits_fct
+[0m22:54:49.308608 [info ] [Thread-1 (]: 6 of 6 START sql view model danila.first_deposits_fct .......................... [RUN]
+[0m22:54:49.309679 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.campaign_perfomance.stg_scraper__records, now model.campaign_perfomance.first_deposits_fct)
+[0m22:54:49.310331 [debug] [Thread-1 (]: Began compiling node model.campaign_perfomance.first_deposits_fct
+[0m22:54:49.315720 [debug] [Thread-1 (]: Writing injected SQL for node "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.317898 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.first_deposits_fct (compile): 22:54:49.310664 => 22:54:49.317702
+[0m22:54:49.318211 [debug] [Thread-1 (]: Began executing node model.campaign_perfomance.first_deposits_fct
+[0m22:54:49.322297 [debug] [Thread-1 (]: Writing runtime sql for node "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.322925 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.323183 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: BEGIN
+[0m22:54:49.323421 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:54:49.727297 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:49.729097 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.730131 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.first_deposits_fct"} */
+
+  create view "deep-analysis-console"."danila"."first_deposits_fct__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/scraper/stg_scraper__records.sql
+
+with source as (
+    select * from "deep-analysis-console"."danila"."stg_scraper__records"
+)
+
+, transformed as (
+    select
+        'records' as source
+        , date_cet
+        , country_code
+        , campaign_name
+        , ga_campaign_name
+        , campaign_vertical
+        , brand_name
+        , NULL as outclicks
+        , NULL as unique_outclicks
+        , NULL as avg_list_position
+        , NULL as pos_list
+        , sum(signed_up) as signups
+        , sum(deposited_first_time) as cpa_count
+        , sum(acquisition_commission) as cpa_commissions
+        , coalesce(
+            sum(total_commission - acquisition_commission) filter
+            (
+                where total_commission - acquisition_commission <> 0
+                and gtee_count = 0
+            ), 0
+        ) as revshare_commissions
+        , sum(gtee_count) as gtee_count
+        , sum(gtee_commissions) as gtee_commissions
+        , avg(acquisition_deposit) filter
+        (where deposited_first_time > 0) as avg_deposit_amount
+    from source
+    where
+        deposited_first_time > 0.5
+        -- and date_cet > '2024-03-31'
+        --and deal_id is null
+        --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
+    --and user_id='ae4eb2f5ad8ebf29'
+    group by
+        source, date_cet, country_code, campaign_name
+        , ga_campaign_name, campaign_vertical, brand_name
+)
+
+
+select * from transformed
+  );
+[0m22:54:49.783960 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m22:54:49.790831 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.791522 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.first_deposits_fct"} */
+alter table "deep-analysis-console"."danila"."first_deposits_fct__dbt_tmp" rename to "first_deposits_fct"
+[0m22:54:49.840854 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m22:54:49.844988 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: COMMIT
+[0m22:54:49.845759 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.846391 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: COMMIT
+[0m22:54:49.895523 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:49.901388 [debug] [Thread-1 (]: Using postgres connection "model.campaign_perfomance.first_deposits_fct"
+[0m22:54:49.901923 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: /* {"app": "dbt", "dbt_version": "1.5.4", "profile_name": "piter", "target_name": "dev", "node_id": "model.campaign_perfomance.first_deposits_fct"} */
+drop view if exists "deep-analysis-console"."danila"."first_deposits_fct__dbt_backup" cascade
+[0m22:54:49.950958 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m22:54:49.953391 [debug] [Thread-1 (]: Timing info for model.campaign_perfomance.first_deposits_fct (execute): 22:54:49.318387 => 22:54:49.953121
+[0m22:54:49.953889 [debug] [Thread-1 (]: On model.campaign_perfomance.first_deposits_fct: Close
+[0m22:54:49.955240 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f4863de9-f574-4713-9d04-c249f1eb8576', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068b4d90>]}
+[0m22:54:49.956104 [info ] [Thread-1 (]: 6 of 6 OK created sql view model danila.first_deposits_fct ..................... [[32mCREATE VIEW[0m in 0.65s]
+[0m22:54:49.957146 [debug] [Thread-1 (]: Finished running node model.campaign_perfomance.first_deposits_fct
+[0m22:54:49.958598 [debug] [MainThread]: Using postgres connection "master"
+[0m22:54:49.958905 [debug] [MainThread]: On master: BEGIN
+[0m22:54:49.959190 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:54:50.438068 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:54:50.439723 [debug] [MainThread]: On master: COMMIT
+[0m22:54:50.440706 [debug] [MainThread]: Using postgres connection "master"
+[0m22:54:50.441426 [debug] [MainThread]: On master: COMMIT
+[0m22:54:50.500104 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:54:50.501271 [debug] [MainThread]: On master: Close
+[0m22:54:50.503968 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:54:50.504508 [debug] [MainThread]: Connection 'model.campaign_perfomance.first_deposits_fct' was properly closed.
+[0m22:54:50.505141 [info ] [MainThread]: 
+[0m22:54:50.505853 [info ] [MainThread]: Finished running 4 view models, 2 table models in 0 hours 0 minutes and 32.08 seconds (32.08s).
+[0m22:54:50.508229 [debug] [MainThread]: Command end result
+[0m22:54:50.521994 [info ] [MainThread]: 
+[0m22:54:50.522721 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:54:50.523030 [info ] [MainThread]: 
+[0m22:54:50.523328 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m22:54:50.523762 [debug] [MainThread]: Command `dbt run` succeeded at 22:54:50.523698 after 32.21 seconds
+[0m22:54:50.523970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101164e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10115f090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10115f150>]}
+[0m22:54:50.524149 [debug] [MainThread]: Flushing usage events
