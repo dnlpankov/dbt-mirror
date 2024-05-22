@@ -46,6 +46,8 @@ with source as (
             when campaign_name = 'goldenlion' then 'goldenliongames'
             else campaign_name
         end as campaign_name
+        , traffic_sources as traffic_source
+        , traffic_types as traffic_type
     from source
     where
         date_parsed > '2024-03-31'
@@ -61,7 +63,7 @@ with source as (
 , added_grain as (
     select
         *
-        , md5(user_id || deal_id || date_cet) as grain_id
+        , md5(user_id || deal_id || date_cet) as grain_id --registration ftd
     from transformed
 )
 
