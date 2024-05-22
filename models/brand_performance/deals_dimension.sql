@@ -10,7 +10,7 @@ with main as (
         , deal_revshare as revenue_share_commission
         , campaign_name as campaign_group -- campaign_name? 
         , gap_campaign_name as google_ads_campaign_id -- ga_campaign_name? 
-        , traffic_types as betting_type --(vertical) tables with the names
+        , traffic_types as campaign_vertical --(vertical) tables with the names
         , traffic_sources --(FB, Google, etc) tables with names
     from deals
 )

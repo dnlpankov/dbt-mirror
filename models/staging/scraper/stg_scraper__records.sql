@@ -46,8 +46,8 @@ with source as (
             when campaign_name = 'goldenlion' then 'goldenliongames'
             else campaign_name
         end as campaign_name
-        , traffic_sources as traffic_source
-        , traffic_types as traffic_type
+        -- , traffic_sources as traffic_source
+        -- , traffic_types as traffic_type
     from source
     where
         date_parsed > '2024-03-31'
