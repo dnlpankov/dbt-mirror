@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: backend # brand_performance  # Updated to match the model reference
+    database: deep-analysis-console
+    schema: console
+    tables:
+      - name: traffic_sources
+      - name: traffic_types

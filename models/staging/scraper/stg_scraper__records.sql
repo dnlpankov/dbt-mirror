@@ -1,5 +1,4 @@
 -- models/staging/scraper/stg_scraper__records.sql
-
 {{
   config(
     materialized='table'
@@ -23,7 +22,7 @@ with source as (
         , cpa_count as deposited_first_time
         , gtee_count
         , cpa_commissions as acquisition_commission
-        , deposits as acquisition_deposit
+        , deposits as deposited_amount
         , total_commission
         , gtee_commissions
         , net_revenue
@@ -80,15 +79,20 @@ with source as (
 )
 
 -- Filter out duplicates, keeping only the first occurrence
-, deduplicated_records as (
-    select *
-    from
-        ranked_records
-    where
-        duplicate_count = 1
-)
+-- , deduplicated_records as (
+--     select *
+--     from
+--         ranked_records
+--     where
+--         duplicate_count = 1
+-- )
 
-select * from deduplicated_records
+
+select * from ranked_records where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
+
+-- select user_id, deposited_first_time, date_cet, brand_name --sum(deposited_first_time) as cpa_count 
+-- from transformed where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
+--select  deposited_first_time, user_id, deal_id, date_cet, grain_id, duplicate_count  from ranked_records where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
 
 
 

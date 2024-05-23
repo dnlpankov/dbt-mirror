@@ -52,6 +52,15 @@
 
 SELECT id, user_id, date_parsed, date, brand_name, cpa_count, registrations, conversion_timestamp
 FROM records
-WHERE id='5393572' or id= '5393571'--date_parsed = '2024-05-16' AND user_id = '51a4a42eaaeb12f7'
+where user_id='ada7697538a29077'
+    or user_id='74d842b7d54ae00b'
+    or user_id='f145176d0920df96'
+    or user_id='4d156f20c8b8ea7c'
+
+--WHERE id='5393572' or id= '5393571'
+
+
+
+--date_parsed = '2024-05-16' AND user_id = '51a4a42eaaeb12f7'
 --GROUP BY user_id, conversion_timestamp, date_parsed, brand_name, cpa_count, registrations
 --HAVING COUNT(*) = 1
