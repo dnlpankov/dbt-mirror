@@ -29,7 +29,7 @@ with source as (
         ) as revshare_commissions
         , sum(gtee_count) as gtee_count
         , sum(gtee_commissions) as gtee_commissions
-        , avg(acquisition_deposit) filter
+        , avg(deposited_amount) filter
         (where deposited_first_time > 0) as avg_deposit_amount
     from source
     where

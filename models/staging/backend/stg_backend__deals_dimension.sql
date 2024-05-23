@@ -1,3 +1,5 @@
+{{ config(materialized= 'table' ) }}
+
 with main as (
     select
         id as deal_id
@@ -10,8 +12,8 @@ with main as (
         , deal_revshare as revenue_share_commission
         , campaign_name as campaign_group -- campaign_name? 
         , gap_campaign_name as google_ads_campaign_id -- ga_campaign_name? 
-        , traffic_types as campaign_vertical --(vertical) tables with the names
-        , traffic_sources --(FB, Google, etc) tables with names
+        , traffic_types::integer as campaign_vertical_id
+        , traffic_sources::integer as traffic_source_id --(FB, Google, etc) tables with names
     from deals
 )
 
