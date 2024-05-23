@@ -88,7 +88,7 @@ with source as (
 -- )
 
 
-select * from ranked_records where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
+select * from ranked_records --where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
 
 -- select user_id, deposited_first_time, date_cet, brand_name --sum(deposited_first_time) as cpa_count 
 -- from transformed where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
