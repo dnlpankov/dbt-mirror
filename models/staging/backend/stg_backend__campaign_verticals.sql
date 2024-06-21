@@ -3,8 +3,10 @@
 {{ config(materialized= 'table' ) }}
 
 with source as (
-    select * from {{ source('backend','traffic_types') }}
+    select * from {{ source('backend','stg_backend__campaign_verticals') }}
 )
+
+
 
 select
     id::integer

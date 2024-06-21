@@ -13,9 +13,10 @@ with source as (
     select
         id
         , created_at
+        , conversion_timestamp
         , user_id
         , deal_id
-        , date_parsed as date_cet
+        , date_parsed as date_eet
         , click_id
         , geo as country_code
         , registrations as signed_up
@@ -62,7 +63,7 @@ with source as (
 , added_grain as (
     select
         *
-        , md5(user_id || deal_id || date_cet) as grain_id --registration ftd
+        , md5(user_id || deal_id || date_eet) as grain_id --registration ftd
     from transformed
 )
 
@@ -88,7 +89,7 @@ with source as (
 -- )
 
 
-select * from ranked_records --where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
+select * from ranked_records --where user_id='3070fcc31e680e9a' --brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
 
 -- select user_id, deposited_first_time, date_cet, brand_name --sum(deposited_first_time) as cpa_count 
 -- from transformed where brand_name='wheelz' and date_cet>'2024-05-15' and deposited_first_time>0.5
