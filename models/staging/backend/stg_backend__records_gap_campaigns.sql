@@ -1,7 +1,7 @@
 {{ config(materialized= 'table' ) }}
 
 with source as (
-    select * from {{ source('backend','records') }}
+    select * from {{ source('backend','records_gap_campaigns') }}
 )
 
 

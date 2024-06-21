@@ -8,9 +8,5 @@ sources:
       - name: traffic_sources
       - name: traffic_types
       - name: records
-  
-  - name: backend_danila
-    schema: danila
-    tables:
-      - name: stg_aweber__campaign_characteristics
+      - name: records_gap_campaigns
 

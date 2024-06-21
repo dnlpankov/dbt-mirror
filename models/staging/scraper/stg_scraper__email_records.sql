@@ -10,6 +10,7 @@ select
     "campaign_name"
     , "geo" as country_code
     , "brand_name"
+    , timestamp_parsed
     , "registrations"
     , "cpa_commissions"
     , "cpa_count" as first_time_deposit
