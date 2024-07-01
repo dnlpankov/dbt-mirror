@@ -30,7 +30,7 @@ with chars_source as (
         on cs.list_id = ds.list_id
             and cs.campaign_id = ds.id 
             and cs.sent_at_cet is not null
-            and cs.list_id != 6405745
+            and cs.list_id != 6784256 --6405745 
 )
 
 select * from main
