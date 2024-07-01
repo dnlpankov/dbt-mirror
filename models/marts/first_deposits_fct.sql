@@ -7,7 +7,7 @@ with source as (
 , transformed as (
     select
         'records' as source
-        , date_cet
+        , date_eet
         , country_code
         , campaign_name
         , ga_campaign_name
