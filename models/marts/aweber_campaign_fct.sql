@@ -16,7 +16,6 @@ with chars_source as (
         , cs.list_id
         , cs.sent_at_cet
         , num_emailed
-        , num_emailed
         , num_complaints
         , unique_clicks
         , unique_opens

@@ -10,7 +10,7 @@ with source as (
         , campaign_type
         , campaign_id as aweber_campaign_id
         , list_id
-        , sent_at_cet
+        , sent_at_cet::timestamp as sent_at_cet
 
     from source
     where sent_at_cet is not null
