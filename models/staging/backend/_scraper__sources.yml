@@ -7,3 +7,6 @@ sources:
     tables:
       - name: traffic_sources
       - name: traffic_types
+      - name: records
+      - name: records_gap_campaigns
+

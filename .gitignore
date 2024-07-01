@@ -7,3 +7,4 @@ datadiff.toml
 .DS_Store
 .sqlfluff
 .sqlfluffignore
+models/marts/aweber_emails_elt.sql

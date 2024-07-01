@@ -1,12 +1,13 @@
 -- models/staging/scraper/stg_scraper__records.sql
 
-{{ config(materialized= 'table' ) }}
+{{ config(materialized= 'view' ) }}
 
 with source as (
-    select * from {{ source('backend','traffic_types') }}
+    select * from {{ source('backend','traffic_sources') }} limit 1
 )
 
+
+
 select
-    id::integer
-    , name
+    *
 from source
