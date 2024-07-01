@@ -39,7 +39,7 @@ with source as (
         --and gtee_commissions > 0 --and cpa_count>0.5 and total_commission>cpa_commissions -- noqa: LT05
     --and user_id='ae4eb2f5ad8ebf29'
     group by
-        source, date_cet, country_code, campaign_name
+        source, date_eet, country_code, campaign_name
         , ga_campaign_name, campaign_vertical, brand_name
 )
 
