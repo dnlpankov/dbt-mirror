@@ -12,7 +12,7 @@ with chars_source as (
 , main as (
     select
         campaign_id as aweber_campaign_id
-        , account_id
+        , account_idSS
         , cs.list_id
         , cs.sent_at_cet
         , num_emailed
@@ -34,4 +34,4 @@ with chars_source as (
 )
 
 select * from main
-
+where aweber_campaign_id=57926709

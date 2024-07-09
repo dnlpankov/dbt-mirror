@@ -23,9 +23,9 @@ from source
 where
     ("campaign_name" = 'email')
     --and cpa_count>0 
-    and date_parsed>'2024-05-31'
+    and date_parsed>'2024-05-30'
     and ("registrations" + "cpa_count" > 0) -- condition for the speed
-    and "cpa_count" > 0
+    --and "cpa_count" > 0
 -- select
 --     *
 -- from source
