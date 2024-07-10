@@ -12,7 +12,7 @@ with chars_source as (
 , main as (
     select
         campaign_id as aweber_campaign_id
-        , account_idSS
+        , account_id
         , cs.list_id
         , cs.sent_at_cet
         , num_emailed
