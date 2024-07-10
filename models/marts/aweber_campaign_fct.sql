@@ -34,4 +34,4 @@ with chars_source as (
 )
 
 select * from main
-where aweber_campaign_id=57926709
+--where aweber_campaign_id=57926709
