@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+
+  
+  - name: backend_danila
+    database: deep-analysis-console
+    schema: danila
+    tables:
+      - name: stg_aweber__campaign_characteristics
+      - name: stg_aweber__campaign_data
+

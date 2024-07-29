@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: main # brand_performance  # Updated to match the model reference
+    database: deep-analysis-console
+    schema: console
+    tables:
+      - name: deals
+      - name: postbacks_outgoing 
+      - name: records_gap_campaigns
+      - name: campaign_names_mapping
+      - name: records
+      - name: matomo_actions
+      - name: matomo_visits
